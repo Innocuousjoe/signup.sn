@@ -1,0 +1,64 @@
+<%= form_for @user, url: users_path do |f| %>
+<div class='login_container'>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field(:email) %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field(:password)  %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field(:password_confirmation)  %>
+  </div>
+  <div id="height">
+    <%= f.label :feet %>
+    <%= f.select(:height, (4..6)) %>
+    <%= f.label :inches %>
+    <%= f.select(:height, (0..11)) %>
+  </div>
+  <div>
+    <%= f.label(:body, "Body Type") %>
+    <%= f.select(:body, ["Average", "Slim / Slender", "Fit / Athletic", "Few extra pounds"])  %>
+  </div>
+  <div>
+    <%= f.label(:hair, "Hair Color") %>
+    <%= f.select(:hair, ["Auburn / Red", "Bald", "Black", "Blonde", "Dark blonde", "Dark brown", "Gray / White", "Light brown", "Salt and pepper gray"])  %>
+  </div>
+  <div>
+    <%= f.label(:eye, "Eye Color") %>
+    <%= f.select(:eye, ["Blue", "Brown", "Green", "Gray", "Hazel", "Other"])  %>
+  </div>
+  <div>
+    <%= f.label(:race, "Race") %>
+    <%= f.select(:race, ["Black / African descent", "Asian", "White / Caucasian", "East Indian", 
+                         "Hispanic / Latino", "Middle Eastern", "Multi-racial", "Native American", 
+                         "Pacific Islander", "Other"])  %>
+  </div>
+  <div>
+    <%= f.label(:occupation, "Occupation")%>
+    <%= f.text_field(:occupation)  %>
+  </div>
+  <div>
+    <%= f.label(:drinking, "Drinking") %>
+    <%= f.text_field(:drinking)  %>
+  </div>
+  <div>
+    <%= f.label(:smoking, "Smoking") %>
+    <%= f.radio_button(:smoking, "yes") %>
+    <%= f.radio_button(:smoking, "no") %>
+  </div>
+  <div>
+    <%= f.label(:about, "About Me") %>
+    <%= f.text_area(:about)  %>
+  </div>
+  <div>
+    <%= f.label :img, "Profile picture" %>
+    <%= f.file_field(:img)  %>
+  </div>
+  <div class="login-button">
+    <%= f.submit 'Register' %>
+  </div>
+</div>
+<% end %>

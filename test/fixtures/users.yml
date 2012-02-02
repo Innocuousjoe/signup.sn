@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  height: MyString
+  body: MyString
+  hair: MyString
+  eye: MyString
+  race: MyString
+  occupation: MyString
+  drinking: MyString
+  smoking: MyString
+  about: MyString
+
+two:
+  height: MyString
+  body: MyString
+  hair: MyString
+  eye: MyString
+  race: MyString
+  occupation: MyString
+  drinking: MyString
+  smoking: MyString
+  about: MyString
