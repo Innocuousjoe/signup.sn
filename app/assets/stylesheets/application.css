@@ -24,6 +24,11 @@
   height: 70px;  
 }
 
+#center {
+  background-color: pink;
+  margin: 50%;
+}
+
 #banner-text {
   color: white;
   padding: 15     px;
