@@ -11,10 +11,20 @@
   display: inline-block;
 }
 
-#user_height {
+#user_feet {
   width: 60px;
 }
 
-div {
-  padding: 5px;
+#user_inches {
+  width: 60px;
+}
+
+#banner {
+  background-color: blue;
+  height: 70px;  
+}
+
+#banner-text {
+  color: white;
+  padding: 15     px;
 }

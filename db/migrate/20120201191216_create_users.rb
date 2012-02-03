@@ -11,6 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :smoking
       t.string :about
       t.string :email
+      t.string :password_confirmation
 
       t.timestamps
     end

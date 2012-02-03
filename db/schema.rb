@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20120201191216) do
     t.string   "drinking"
     t.string   "smoking"
     t.string   "about"
+    t.string   "email"
+    t.string   "password_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
