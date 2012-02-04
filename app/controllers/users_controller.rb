@@ -1,18 +1,20 @@
 class UsersController < ApplicationController
   def new
-    @user = User.create(params[:user])
-    if @user   
-      render :landing
-    else
-      p "error!"
-    end
+    @user = User.new
   end
   
   def show
     render :new
   end
 
-  def create  
+  def create
+    p @user
+    p "================"
+    p params
+    p params[:user]
+    p "==============="
+    @user = User.create(params[:user])
+    p @user
     @user.save!
   end
 end

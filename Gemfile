@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 
 gem 'mysql2'
+gem 'httparty'
+gem 'nokogiri'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'

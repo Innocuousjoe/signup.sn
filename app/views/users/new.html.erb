@@ -1,9 +1,9 @@
-<%= form_for @user, url: users_path do |f| %>
+<%= form_for @user do |f| %>
 
 <div class='login_container'>
   <div>
     <%= f.label :email %>
-    <%= f.email_field(:email) %>
+    <%= f.text_field(:email) %>
   </div>
   <div>
     <%= f.label :password %>
@@ -72,11 +72,13 @@
     <%= f.text_area(:about)  %>
   </div>
   <div>
-    <%= f.label :img, "Profile picture" %>
-    <%= f.file_field(:img)  %>
+    <img src= <%= captcha_generate %> alt="CAPTCHA" />
+    <%= f.label(:captcha_answer, "Enter Captcha Here") %>
+    <%= f.text_field(:captcha_answer)  %>
   </div>
   <div class="login-button">
     <%= f.submit 'Register' %>
+    <%= link_to 'Log in' %>
   </div>
 </div>
 <% end %>

@@ -11,7 +11,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :smoking
       t.string :about
       t.string :email
+      t.string :password
       t.string :password_confirmation
+      t.string :captcha_answer
+      t.string :captcha_key
 
       t.timestamps
     end
