@@ -6,6 +6,9 @@
  *= require_self
  *= require_tree . 
 */
+body {
+  padding: 5px;
+}
 
 #height label {
   display: inline-block;
@@ -32,4 +35,20 @@
 #banner-text {
   color: white;
   padding: 15     px;
+}
+
+#birthday label{
+  display: inline-block;
+}
+
+#user_birthday_month {
+  width: 60px;
+}
+
+#user_birthday_day {
+  width: 60px;
+}
+
+#user_birthday_year {
+  width: 60px;
 }

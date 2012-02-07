@@ -2,6 +2,10 @@
 
 <div class='login_container'>
   <div>
+    <%= f.label :username %>
+    <%= f.text_field(:username) %>
+  </div>
+  <div>
     <%= f.label :email %>
     <%= f.text_field(:email) %>
   </div>
@@ -9,10 +13,11 @@
     <%= f.label :password %>
     <%= f.password_field(:password)  %>
   </div>
+  <!-- verify that passwords match in javascript, or something? -->
   <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field(:password_confirmation)  %>
-  </div>
+      <label for="user_password_confirmation">Password confirmation</label>
+      <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" />
+    </div>
   <div id="height">
       <label for="user_feet">Feet</label>
         <select id="user_feet">
@@ -36,6 +41,31 @@
           </select>
           <%= f.hidden_field :height, id: "user_height" %>
     </div>
+  <div>
+    <%= f.label(:sex, "Gender")%>
+    <%= f.select(:sex, {"Male" => "M", "Female" => "F"})%>
+  </div>
+  <div>
+    <%= f.label(:sex_seeking, "Gender Seeking") %>
+    <%= f.select(:sex_seeking, {"Women" => "F", "Men" => "M"}) %>
+  </div>
+  <div id="birthday">
+    Enter your birthday:
+    <label for="birthday_month">Month</label>
+    <%= f.select(:birthday_month, 1..12) %>
+    <label for="birthday_day">Day</label>
+    <%= f.select(:birthday_day, 1..31) %>
+    <label for="birthday_year">Year</label>
+    <%= f.select(:birthday_year, 1910..1994)%>
+  </div>
+  <div>
+    <%= f.label(:country, "Country") %>
+    <%= f.select(:country, ["United States"])%>
+  </div>
+  <div>
+    <%= f.label(:zipcode, "Zipcode") %>
+    <%= f.text_field(:zipcode) %>
+  </div>
   <div>
     <%= f.label(:body, "Body Type") %>
     <%= f.select(:body, ["Average", "Slim / Slender", "Fit / Athletic", "Few extra pounds"])  %>
@@ -72,7 +102,11 @@
     <%= f.text_area(:about)  %>
   </div>
   <div>
-    <img src= <%= captcha_generate %> alt="CAPTCHA" />
+    <%= @user.generate_captcha %>
+    <%= f.hidden_field(:captcha_key) %>
+  </div>
+  <div>
+    <img src= <%= SinglesnetApi.captcha_img_url(@user.captcha_key) %> alt="CAPTCHA" />
     <%= f.label(:captcha_answer, "Enter Captcha Here") %>
     <%= f.text_field(:captcha_answer)  %>
   </div>

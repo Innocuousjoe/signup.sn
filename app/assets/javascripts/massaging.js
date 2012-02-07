@@ -5,4 +5,5 @@ $(function(){
     var feet = $('#user_feet').val();
     $('#user_height').val(feet + "'" + inches + '"');
     });
+
 });

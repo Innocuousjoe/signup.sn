@@ -41,7 +41,9 @@ module SignupSn
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    
+    config.singlesnet_api_key = "b53671a74a41b3e513e0abf4fdedf3af"
+  
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end

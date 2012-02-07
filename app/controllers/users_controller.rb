@@ -7,14 +7,11 @@ class UsersController < ApplicationController
     render :new
   end
 
-  def create
-    p @user
-    p "================"
-    p params
-    p params[:user]
-    p "==============="
-    @user = User.create(params[:user])
-    p @user
+  def create 
+    @user = User.create(params[:user]) 
+    @user.city_finder  
     @user.save!
+    SinglesnetController.new(@user)
   end
+  
 end
