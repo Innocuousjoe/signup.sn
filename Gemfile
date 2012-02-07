@@ -1,8 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-
-gem 'mysql2'
+gem 'pg'
 gem 'httparty'
 gem 'nokogiri'
 
@@ -17,6 +16,7 @@ gem 'less-rails-bootstrap'
 
 group :development, :test do
   # Pretty printed test output
+  gem 'mysql2'
   gem 'turn', '0.8.2', :require => false
   gem 'ruby-debug19'
 end
