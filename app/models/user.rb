@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   def city_finder
+    p zipcode
     SinglesnetApi.find_city(zipcode)
   end
   

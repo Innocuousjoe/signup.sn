@@ -101,7 +101,7 @@
     <%= f.label(:about, "About Me") %>
     <%= f.text_area(:about)  %>
   </div>
-  <div>
+  <div style='display:none'>
     <%= @user.generate_captcha %>
     <%= f.hidden_field(:captcha_key) %>
   </div>
