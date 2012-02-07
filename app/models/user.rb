@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
-
+  include SinglesnetUser
+  
+  attr_accessor :redirect_url
+  
   def city_finder
-    p zipcode
     SinglesnetApi.find_city(zipcode)
   end
   

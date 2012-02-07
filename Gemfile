@@ -15,7 +15,8 @@ end
 gem 'jquery-rails'
 gem 'less-rails-bootstrap'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
+  gem 'ruby-debug19'
 end

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.create(params[:user]) 
     @user.city_finder  
     @user.save!
-    SinglesnetController.new(@user)
+    redirect_to @user.construct_url
   end
   
 end

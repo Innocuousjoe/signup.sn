@@ -1,12 +1,10 @@
 class SinglesnetController < ApplicationController
-  FORMAT = "xml" 
-  API_KEY = "b53671a74a41b3e513e0abf4fdedf3af"
   CID = "10184"
   SINGLESNET_BASE_URL= "http://api.singlesnet.com/api/1.2/signup/submit"
   SINGLESNET_CORE_URL= "/signup/submit" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
   
   
-  attr_reader :errors
+  attr_accessor :errors, :redirect_url
   
   def initialize(user)
     @user = user
@@ -16,13 +14,13 @@ class SinglesnetController < ApplicationController
   def create
     poster = SinglesnetApi.new
     hash = {
-      "screenname" => "abcpassword1234",
+      "screenname" => @user.username,
       "email" => @user.email,
       "password" => @user.password,
       "sex" => @user.sex,
       "sex_seeking" => @user.sex_seeking,
-      "birthday_month" => @user.birthday_month, #Better to save the birthday as three separate entries?
-      "birthday_day" => @user.birthday_day, #Same question
+      "birthday_month" => @user.birthday_month, 
+      "birthday_day" => @user.birthday_day,
       "birthday_year" => @user.birthday_year,
       "country" => "US",
       "zipcode" => @user.zipcode.to_s,
@@ -55,8 +53,7 @@ class SinglesnetController < ApplicationController
       "college" => "no",
     }
     @response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
-    # core_key = Nokogiri::XML.parse(@response.body).css("success").attribute("core_key").value
-    p @response
-    p @user.city_id
+    Nokogiri::XML.parse(@response.body).css("success").text
   end
+
 end
