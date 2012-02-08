@@ -6,6 +6,7 @@ module SinglesnetUser
   SINGLESNET_CORE_URL= "/signup/submit" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
   
   def construct_url
+    p "no, I am here"
     poster = SinglesnetApi.new
     hash = {
       "screenname" => self.username,
@@ -31,6 +32,8 @@ module SinglesnetUser
       "smoke" => self.smoking,
       "personal_description_wanted" => self.about,
       "sports_play" => "no",
+      "smoking" => "no",
+      "drinking" => "no",
       "exercise" => "no",
       "outdoor" => "no",
       "artistic" => "no",
@@ -46,7 +49,15 @@ module SinglesnetUser
       "high_school" => "no",
       "college" => "no",
     }
-    @response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
-    Nokogiri::XML.parse(@response.body).css("success").text 
+    response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
+    if (Nokogiri::XML.parse(response.body).css("success").empty?) then
+      parse_errors(response)
+    else
+      self.redirect_url = Nokogiri::XML.parse(response.body).css("success").text 
+    end
+  end
+  
+  def parse_errors(response)
+    self.flash_error = response.parsed_response["failure"]["message"]
   end
 end

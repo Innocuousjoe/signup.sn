@@ -2,16 +2,18 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
-  def show
-    render :new
-  end
 
-  def create 
+  def create
     @user = User.create(params[:user]) 
-    @user.city_finder  
+    @user.city_finder if @user.zipcode
     @user.save!
-    redirect_to @user.construct_url
+    @user.construct_url
+    if (@user.flash_error)
+      flash[:error] = @user.flash_error
+      render :new
+    else
+      redirect_to @user.redirect_url
+    end
   end
   
 end

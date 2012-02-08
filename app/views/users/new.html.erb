@@ -1,3 +1,4 @@
+<%= flash[:error] %>
 <%= form_for @user do |f| %>
 
 <div class='login_container'>
@@ -89,15 +90,6 @@
     <%= f.text_field(:occupation)  %>
   </div>
   <div>
-    <%= f.label(:drinking, "Drinking") %>
-    <%= f.text_field(:drinking)  %>
-  </div>
-  <div>
-    <%= f.label(:smoking, "Smoking") %>
-    <%= f.radio_button(:smoking, "yes") %>
-    <%= f.radio_button(:smoking, "no") %>
-  </div>
-  <div>
     <%= f.label(:about, "About Me") %>
     <%= f.text_area(:about)  %>
   </div>
@@ -112,7 +104,6 @@
   </div>
   <div class="login-button">
     <%= f.submit 'Register' %>
-    <%= link_to 'Log in' %>
   </div>
 </div>
 <% end %>

@@ -19,6 +19,10 @@ class SinglesnetApi
      "/signup/captcha?key=" + Rails.configuration.singlesnet_api_key + "&format=xml" 
    end
    
+   def self.post_for_core
+     post("/signup/core?key=" + Rails.configuration.singlesnet_api_key + "&format=xhtml")
+   end
+   
    def self.captcha_img
      "/signup/captcha_image?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&captcha_key="
    end
