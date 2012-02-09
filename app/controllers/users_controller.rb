@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:user])
+    @user = User.find(params["id"])
     @user.city_finder if @user.zipcode
     @user.save!
     @user.construct_url
