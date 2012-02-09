@@ -1,7 +1,13 @@
-<%= flash[:error] %>
 <%= form_for @user do |f| %>
 
 <div class='login_container'>
+  <div id="errors">
+    <% if flash.now[:error] %>
+      <% flash.now[:error].each do |fault| %>
+        <%= "<ul>#{fault}</ul>".html_safe %>
+        <% end %>
+    <% end %>
+  </div>
   <div>
     <%= f.label :username %>
     <%= f.text_field(:username) %>

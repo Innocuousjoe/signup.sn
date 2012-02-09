@@ -10,6 +10,22 @@ body {
   padding: 5px;
 }
 
+#errors {
+  color: red;
+}
+
+#gender_select label {
+  display: inline-block;
+}
+
+#user_sex {
+  width: 80px;
+}
+
+#user_sex_seeking {
+  width: 80px;
+}
+
 #height label {
   display: inline-block;
 }
@@ -34,7 +50,7 @@ body {
 
 #banner-text {
   color: white;
-  padding: 15     px;
+  padding: 15px;
 }
 
 #birthday label{

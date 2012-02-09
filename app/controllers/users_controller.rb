@@ -9,11 +9,24 @@ class UsersController < ApplicationController
     @user.save!
     @user.construct_url
     if (@user.flash_error)
-      flash[:error] = @user.flash_error
+      flash.now[:error] = @user.flash_error
       render :new
     else
       redirect_to @user.redirect_url
     end
   end
   
+  def update
+    @user = User.find(params[:user])
+    @user.city_finder if @user.zipcode
+    @user.save!
+    @user.construct_url
+    if (@user.flash_error)
+      flash[:error] = @user.flash_error
+      render :new
+    else
+      redirect_to @user.redirect_url
+    end
+  end
+
 end
