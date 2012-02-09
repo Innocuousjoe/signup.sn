@@ -5,7 +5,7 @@
     <% if flash.now[:error] %>
       <% flash.now[:error].each do |fault| %>
         <%= "<ul>#{fault}</ul>".html_safe %>
-        <% end %>
+        <% end %>  
     <% end %>
   </div>
   <div>
@@ -25,45 +25,189 @@
       <label for="user_password_confirmation">Password confirmation</label>
       <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" />
     </div>
-  <div id="height">
-      <label for="user_feet">Feet</label>
-        <select id="user_feet">
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          </select>
-      <label for="user_inches">Inches</label>
-        <select id="user_inches"><option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          </select>
-          <%= f.hidden_field :height, id: "user_height" %>
-    </div>
   <div>
-    <%= f.label(:sex, "Gender")%>
-    <%= f.select(:sex, {"Male" => "M", "Female" => "F"})%>
+    <%= f.label(:height, "What is your height?")%>
+    <%= f.select(:height, {
+    "< select one >" => "",
+    "4\' 4\"" => "1",
+    "4\' 5\"" => "2",
+    "4\' 6\"" => "3",
+    "4\' 7\"" => "4",
+    "4\' 8\"" => "5",
+    "4\' 9\"" => "6",
+    "4\' 10\"" => "7",
+    "4\' 11\"" => "8",
+    "5\'" => "9",
+    "5\' 1\"" => "10",
+    "5\' 2\"" => "11",
+    "5\' 3\"" => "12",
+    "5\' 4\"" => "13",
+    "5\' 5\"" => "14",
+    "5\' 6\"" => "15",
+    "5\' 7\"" => "16",
+    "5\' 8\"" => "17",
+    "5\' 9\"" => "18",
+    "5\' 10\"" => "19",
+    "5\' 11\"" => "20",
+    "6\'" => "21",
+    "6\' 1\"" => "22",
+    "6\' 2\"" => "23",
+    "6\' 3\"" => "24",
+    "6\' 4\"" => "25",
+    "6\' 5\"" => "26",
+    "6\' 6\"" => "27",
+    "6\' 7\"" => "28",
+    "6\' 8\"" => "29"
+    })%>
   </div>
   <div>
-    <%= f.label(:sex_seeking, "Gender Seeking") %>
-    <%= f.select(:sex_seeking, {"Women" => "F", "Men" => "M"}) %>
+    <%= f.label(:sex, "I am a")%>
+    <%= f.select(:sex, {"Man" => "M", "Woman" => "F"})%>
+  </div>
+  <div>
+    <%= f.label(:sex_seeking, "seeking a") %>
+    <%= f.select(:sex_seeking, {"Woman" => "F", "Man" => "M"}) %>
   </div>
   <div id="birthday">
     Enter your birthday:
     <label for="birthday_month">Month</label>
-    <%= f.select(:birthday_month, 1..12) %>
+    <%= f.select(:birthday_month, {
+    "Month" => "0",
+    "Jan" => "01", 
+    "Feb" => "02", 
+    "Mar" => "03", 
+    "Apr" => "04", 
+    "May" => "05", 
+    "Jun" => "06", 
+    "Jul" => "07", 
+    "Aug" => "08", 
+    "Sep" => "09", 
+    "Oct" => "10", 
+    "Nov" => "11", 
+    "Dec" => "12"} 
+    ) %>
     <label for="birthday_day">Day</label>
-    <%= f.select(:birthday_day, 1..31) %>
+    <%= f.select(:birthday_day, {
+    "Day" => "0",
+    "01" => "01", 
+    "02" => "02", 
+    "03" => "03", 
+    "04" => "04", 
+    "05" => "05", 
+    "06" => "06", 
+    "07" => "07", 
+    "08" => "08", 
+    "09" => "09", 
+    "10" => "10", 
+    "11" => "11", 
+    "12" => "12", 
+    "13" => "13", 
+    "14" => "14", 
+    "15" => "15", 
+    "16" => "16", 
+    "17" => "17", 
+    "18" => "18", 
+    "19" => "19", 
+    "20" => "20", 
+    "21" => "21", 
+    "22" => "22", 
+    "23" => "23", 
+    "24" => "24", 
+    "25" => "25", 
+    "26" => "26", 
+    "27" => "27", 
+    "28" => "28", 
+    "29" => "29", 
+    "30" => "30", 
+    "31" => "31"}) %>
     <label for="birthday_year">Year</label>
-    <%= f.select(:birthday_year, 1910..1994)%>
+    <%= f.select(:birthday_year, {
+    "Year" => "0",
+    "1910" => "1910", 
+    "1911" => "1911", 
+    "1912" => "1912", 
+    "1913" => "1913", 
+    "1914" => "1914", 
+    "1915" => "1915", 
+    "1916" => "1916", 
+    "1917" => "1917", 
+    "1918" => "1918", 
+    "1919" => "1919", 
+    "1920" => "1920", 
+    "1921" => "1921", 
+    "1922" => "1922", 
+    "1923" => "1923", 
+    "1924" => "1924", 
+    "1925" => "1925", 
+    "1926" => "1926", 
+    "1927" => "1927", 
+    "1928" => "1928", 
+    "1929" => "1929", 
+    "1930" => "1930", 
+    "1931" => "1931", 
+    "1932" => "1932", 
+    "1933" => "1933", 
+    "1934" => "1934", 
+    "1935" => "1935", 
+    "1936" => "1936", 
+    "1937" => "1937", 
+    "1938" => "1938", 
+    "1939" => "1939", 
+    "1940" => "1940", 
+    "1941" => "1941", 
+    "1942" => "1942", 
+    "1943" => "1943", 
+    "1944" => "1944", 
+    "1945" => "1945", 
+    "1946" => "1946", 
+    "1947" => "1947", 
+    "1948" => "1948", 
+    "1949" => "1949", 
+    "1950" => "1950", 
+    "1951" => "1951", 
+    "1952" => "1952", 
+    "1953" => "1953", 
+    "1954" => "1954", 
+    "1955" => "1955", 
+    "1956" => "1956", 
+    "1957" => "1957", 
+    "1958" => "1958", 
+    "1959" => "1959", 
+    "1960" => "1960", 
+    "1961" => "1961", 
+    "1962" => "1962", 
+    "1963" => "1963", 
+    "1964" => "1964", 
+    "1965" => "1965", 
+    "1966" => "1966", 
+    "1967" => "1967", 
+    "1968" => "1968", 
+    "1969" => "1969", 
+    "1970" => "1970", 
+    "1971" => "1971", 
+    "1972" => "1972", 
+    "1973" => "1973", 
+    "1974" => "1974", 
+    "1975" => "1975", 
+    "1976" => "1976", 
+    "1977" => "1977", 
+    "1978" => "1978", 
+    "1979" => "1979", 
+    "1980" => "1980", 
+    "1981" => "1981", 
+    "1982" => "1982", 
+    "1983" => "1983", 
+    "1984" => "1984", 
+    "1985" => "1985", 
+    "1986" => "1986", 
+    "1987" => "1987", 
+    "1988" => "1988", 
+    "1989" => "1989", 
+    "1990" => "1990", 
+    "1991" => "1991", 
+    "1992" => "1992", 
+    "1993" => "1993", 
+    "1994" => "1994"})%>
   </div>
   <div>
     <%= f.label(:country, "Country") %>
@@ -75,25 +219,111 @@
   </div>
   <div>
     <%= f.label(:body, "Body Type") %>
-    <%= f.select(:body, ["Average", "Slim / Slender", "Fit / Athletic", "Few extra pounds"])  %>
+    <%= f.select(:body, {
+    "< select one >" => "",
+    "Average" => "1", 
+    "Slim / Slender" => "2", 
+    "Fit / Athletic" => "3", 
+    "Few extra pounds" => "4"})  %>
   </div>
   <div>
     <%= f.label(:hair, "Hair Color") %>
-    <%= f.select(:hair, ["Auburn / Red", "Bald", "Black", "Blonde", "Dark blonde", "Dark brown", "Gray / White", "Light brown", "Salt and pepper gray"])  %>
+    <%= f.select(:hair, {
+    "< select one >" => "",  
+    "Auburn / Red" => "1", 
+    "Bald" => "2", 
+    "Black" => "3", 
+    "Blonde" => "4", 
+    "Dark blonde" => "5", 
+    "Dark brown" => "6", 
+    "Gray / White" => "7", 
+    "Light brown" => "8", 
+    "Salt and pepper gray" => "9" 
+    })  %>
   </div>
   <div>
     <%= f.label(:eye, "Eye Color") %>
-    <%= f.select(:eye, ["Blue", "Brown", "Green", "Gray", "Hazel", "Other"])  %>
+    <%= f.select(:eye, {
+    "< select one >" => "",  
+    "Blue" => "1", 
+    "Brown" => "2", 
+    "Green" => "3", 
+    "Gray" => "4", 
+    "Hazel" => "5", 
+    "Other" => "6" 
+    })  %>
   </div>
   <div>
     <%= f.label(:race, "Race") %>
-    <%= f.select(:race, ["Black / African descent", "Asian", "White / Caucasian", "East Indian", 
-                         "Hispanic / Latino", "Middle Eastern", "Multi-racial", "Native American", 
-                         "Pacific Islander", "Other"])  %>
+    <%= f.select(:race, {
+    "< select one >" => "",   
+    "Black / African descent" => "1", 
+    "Asian" => "2", 
+    "White / Caucasian" => "3", 
+    "East Indian" => "4", 
+    "Hispanic / Latino" => "5", 
+    "Middle Eastern" => "6", 
+    "Multi-racial" => "7", 
+    "Native American" => "8", 
+    "Pacific Islander" => "9", 
+    "Other" => "10" })  %>
   </div>
   <div>
     <%= f.label(:occupation, "Occupation")%>
-    <%= f.text_field(:occupation)  %>
+    <%= f.select(:occupation, {
+      "< select one >" => "",
+      "Accounting" => "1",
+    "Actor / Actress" => "2",
+    "Administrative" => "3",
+    "Advertising" => "4",
+    "Agriculture" => "5",
+    "Architect" => "6",
+    "Arts" => "7",
+    "Banking" => "8",
+    "Biotechnology" => "9",
+    "Business Owner" => "10",
+    "Computers, Hard" => "12",
+    "Computers, Soft" => "13",
+    "Construction" => "14",
+    "Consulting" => "15",
+    "Customer Service" => "16",
+    "Engineering" => "17",
+    "Entrepreneur" => "18",
+    "Financial Services" => "19",
+    "Government" => "20",
+    "Graphic Design" => "21",
+    "Health-care" => "22",
+    "Hospitality / Tourism" => "23",
+    "Human Resources" => "25",
+    "Info. Technology" => "26",
+    "Insurance" => "27",
+    "Internet" => "28",
+    "Law Enforcement" => "29",
+    "Legal" => "30",
+    "Manufacturing" => "31",
+    "Marketing" => "32",
+    "Military" => "33",
+    "Maintenance" => "34",
+    "Nanny / Child Care" => "35",
+    "Nursing" => "36",
+    "Pharmaceutical" => "37",
+    "Public Relations" => "38",
+    "Real Estate" => "39",
+    "Restaurant" => "40",
+    "Recruiting" => "41",
+    "Retail" => "42",
+    "Sales" => "43",
+    "Self-Employed" => "44",
+    "Science" => "45",
+    "Social Services" => "11",
+    "Sports" => "46",
+    "Student" => "47",
+    "Teacher" => "48",
+    "Telecommunications" => "49",
+    "Transportation" => "50",
+    "Writer / Editor" => "51",
+    "Retired" => "52"}
+    )  %>
   </div>
   <div>
     <%= f.label(:about, "About Me") %>

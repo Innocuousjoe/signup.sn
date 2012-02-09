@@ -6,7 +6,6 @@ module SinglesnetUser
   SINGLESNET_CORE_URL= "/signup/submit" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
   
   def construct_url
-    p "no, I am here"
     poster = SinglesnetApi.new
     hash = {
       "screenname" => self.username,
@@ -28,28 +27,32 @@ module SinglesnetUser
       "eye_color" => self.eye,
       "race" => self.race,
       "occupation" => self.occupation,
-      "drink" => self.drinking,
-      "smoke" => self.smoking,
-      "personal_description_wanted" => self.about,
-      "sports_play" => "no",
-      "smoke" => "no",
-      "drink" => "no",
-      "exercise" => "no",
-      "outdoor" => "no",
-      "artistic" => "no",
-      "religion" => "no",
-      "sports_fan" => "no",
-      "pet" => "no",
-      "race_date" => "no",
-      "country_date" => "no",
-      "diet" => "no",
-      "relationship_serious" => "no",
-      "children" => "no",
-      "children_date" => "no",
-      "high_school" => "no",
-      "college" => "no",
+      "drink" => self.drink,
+      "smoke" => self.smoke,
+      "personal_description_wanted" => 1,
+      "personal_description" => self.about,
+      "sports_play" => 0,
+      "smoke" => 0,
+      "drink" => 0,
+      "exercise" => 0,
+      "outdoor" => 0,
+      "artistic" => 0,
+      "religion" => 0,
+      "sports_fan" => 0,
+      "pet" => 0,
+      "race_date" => 0,
+      "country_date" => 0,
+      "diet" => 0,
+      "relationship_serious" => 0,
+      "children" => 0,
+      "children_date" => 0,
+      "high_school" => 0,
+      "college" => 0
     }
+    p self
+    p "========"
     response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
+    p response
     if (Nokogiri::XML.parse(response.body).css("success").empty?) then
       parse_errors(response)
     else
