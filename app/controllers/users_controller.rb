@@ -5,27 +5,43 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params[:user]) 
-    @user.city_finder if @user.zipcode
+    @user.construct_core_key
     @user.save!
-    @user.construct_url
     if (@user.flash_error)
       flash.now[:error] = @user.flash_error
       render :new
     else
-      redirect_to @user.redirect_url
+      session[:validity] = true
+      session[:user_id] = @user.id
+      render "profile/new"
     end
   end
-  
+
   def update
-    @user = User.find(params["id"])
-    @user.city_finder if @user.zipcode
-    @user.save!
-    @user.construct_url
-    if (@user.flash_error)
-      flash[:error] = @user.flash_error
-      render :new
+    if (session[:user_id])
+      @user = User.find(session[:user_id])
     else
-      redirect_to @user.redirect_url
+      @user = User.find(params[:user])
+    end
+    if (session[:validity])
+      @user.update_attributes(params[:user])
+      @user.construct_full_url
+      if (@user.flash_error)
+        flash[:error] = @user.flash_error
+        render :new
+      else
+        redirect_to @user.redirect_url
+      end
+    else
+      @user.update_attributes(params[:user])
+      @user.construct_core_key
+      if (@user.flash_error)
+        flash[:error] = @user.flash_error
+        render :new
+      else
+        session[:user_id] = @user.id
+        render "profile/new"
+      end
     end
   end
 

@@ -24,6 +24,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :smoke
       t.integer :about
       t.integer :city_id
+      t.string :core_key
 
       t.timestamps
     end

@@ -2,10 +2,10 @@
 module SinglesnetUser
   
   CID = "10184"
-  SINGLESNET_BASE_URL= "http://api.singlesnet.com/api/1.2/signup/submit"
-  SINGLESNET_CORE_URL= "/signup/submit" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
+  SINGLESNET_FULL_URL= "http://api.singlesnet.com/api/1.2/signup/submit"
+  SINGLESNET_CORE_URL= "/signup/submit/core" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID  
   
-  def construct_url
+  def construct_core_key
     poster = SinglesnetApi.new
     hash = {
       "screenname" => self.username,
@@ -20,7 +20,20 @@ module SinglesnetUser
       "zipcode" => self.zipcode.to_s,
       "captcha_key" => self.captcha_key,
       "captcha_answer" => self.captcha_answer,
-      "city" => self.city_id,
+      # "city" => self.city_id,
+    }
+    response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
+    if (Nokogiri::XML.parse(response.body).css("success").empty?) then
+      parse_errors(response)
+    else
+      self.core_key = response.parsed_response["success"]["core_key"]
+    end
+  end
+  
+  def construct_full_url
+    poster = SinglesnetApi.new
+    hash = {
+      "core_key" => self.core_key,
       "height" => self.height,
       "bodytype" => self.body,
       "hair_color" => self.hair,
@@ -33,6 +46,7 @@ module SinglesnetUser
       "personal_description" => self.about,
       "sports_play" => 0,
       "smoke" => 0,
+      "smoke_date" => 0,
       "drink" => 0,
       "exercise" => 0,
       "outdoor" => 0,
@@ -49,14 +63,12 @@ module SinglesnetUser
       "high_school" => 0,
       "college" => 0
     }
-    p self
-    p "========"
-    response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
-    p response
-    if (Nokogiri::XML.parse(response.body).css("success").empty?) then
+    follow_url = "/signup/submit?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
+    response = poster.class.post(follow_url, :body => hash)
+    if(response.parsed_response["success"].nil?) then
       parse_errors(response)
     else
-      self.redirect_url = Nokogiri::XML.parse(response.body).css("success").text 
+      self.redirect_url = response.parsed_response["success"]
     end
   end
   

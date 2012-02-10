@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include SinglesnetUser
   
-  attr_accessor :redirect_url, :flash_error
+  attr_accessor :redirect_url, :flash_error, :shortcut
     
   def city_finder
     SinglesnetApi.find_city(zipcode)

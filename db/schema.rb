@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20120201191216) do
     t.integer  "smoke"
     t.integer  "about"
     t.integer  "city_id"
+    t.string   "core_key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,6 @@
 SignupSn::Application.routes.draw do
-  root :to => 'users#new'
+  root :to => 'application#home'
     
   resources :users
+  resources :profile
 end
