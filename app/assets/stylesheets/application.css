@@ -1,14 +1,362 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require twitter/bootstrap
- *= require_self
- *= require_tree . 
-*/
-body {
-  padding: 5px;
+* {
+    margin: 0;
+    padding: 0;
 }
+body {
+    background: url("bg_body.gif") repeat-x scroll left top #F4F4F4;
+    color: #333333;
+    font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+}
+a {
+    color: #1467CA;
+}
+textarea, input {
+    outline: medium none;
+}
+#hdr {
+    background: url("bg_hdr.jpg") no-repeat scroll left top transparent;
+    height: 73px;
+    margin: 0 0 30px;
+    width: auto;
+}
+#hdr h1 {
+    display: none;
+}
+.wrap {
+    margin: auto;
+    width: 1000px;
+}
+#modal {
+    background: url("bg_modal.gif") repeat-y scroll left top #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 3px #969696;
+    margin: 0 auto 30px;
+    width: 800px;
+}
+#modal h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+#modal form {
+    float: left;
+    padding: 30px;
+    width: 440px;
+}
+#modal form ul li {
+    color: #999999;
+    font-size: 14px;
+    line-height: 22px;
+    list-style: none outside none;
+    margin: 10px 0 15px;
+}
+#modal form ul li.button {
+    text-align: center;
+}
+#modal form ul li.last {
+    margin: 0;
+    text-align: center;
+}
+#modal form ul li label {
+    float: left;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+#modal form input[type="text"], #modal form input[type="password"] {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0 1px #CCCCCC inset;
+    color: #999999;
+    font-size: 16px;
+    padding: 4px;
+}
+#modal_benefits {
+    float: right;
+    width: 300px;
+}
+#modal_benefits h3 {
+    color: #999999;
+    font-size: 18px;
+    margin: 20px 0;
+    text-align: center;
+}
+#modal_benefits ul li {
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+    list-style: none outside none;
+    margin: 0 0 20px;
+    padding: 0 30px;
+    text-align: center;
+}
+#modal_benefits ul li img {
+    margin: 0 0 5px;
+}
+#modal_benefits ul li h4, #benefits ul li p {
+    text-align: center;
+}
+#modal_benefits ul li h4 {
+    margin: 0 0 5px;
+}
+#content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 3px #969696;
+    margin: 0 auto 30px;
+    padding: 30px 30px 10px;
+    width: 940px;
+}
+#content h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 30px;
+}
+#content p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 15px 0;
+}
+#content .profile {
+    border: 1px solid #F1F1F1;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    width: 277px;
+}
+#content .profile .profile_picture {
+    float: left;
+    margin: 0 20px 0 0;
+}
+#content .profile.last {
+    margin-right: 0;
+}
+#content .profile h3 {
+    color: #1467CA;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+#content .profile p {
+    margin: 0 0 5px;
+}
+#content .profile p a {
+    color: #1467CA;
+    font-size: 12px;
+    font-weight: bold;
+}
+#content .profile p.info {
+    font-size: 12px;
+}
+#content .profile p.status {
+    color: #65B600;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#content .profile ul li {
+    display: inline;
+    list-style: none outside none;
+}
+#landing {
+    background: url("bg_landing_1.jpg") no-repeat scroll right top #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 4px #969696;
+    margin: 0 auto 30px;
+    padding: 40px;
+    position: relative;
+    width: 920px;
+}
+#landing h2 {
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+#landing p {
+    color: #999999;
+    font-size: 24px;
+}
+#landing p.testimonial {
+    bottom: 20px;
+    color: #333333;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+#landing form {
+    margin: 40px 0 0;
+}
+#landing form ul li {
+    list-style: none outside none;
+    margin: 15px 0;
+    width: auto;
+}
+#landing form ul li.last {
+    margin: 20px 0 0;
+}
+#landing form ul li label {
+    color: #999999;
+    display: block;
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+#landing form ul li select {
+}
+#landing form ul li input[type="text"] {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0 1px #CCCCCC inset;
+    color: #999999;
+    font-size: 16px;
+    padding: 8px;
+}
+#landing form ul li input[type="submit"], #modal form input[type="submit"] {
+    background: url("btn_green.png") no-repeat scroll left top transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 24px "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+    height: 70px;
+    margin: 0 0 0 -4px;
+    outline: medium none;
+    text-shadow: 0 -1px 0 #4F710B;
+    text-transform: uppercase;
+    width: 308px;
+}
+#landing form ul li input[type="submit"]:hover, #modal form input[type="submit"]:hover {
+    background-position: left bottom;
+}
+#landing form ul li input[type="submit"]:active, #modal form input[type="submit"]:active {
+    background-position: right top;
+}
+#benefits {
+    background: url("bg_benefits.png") repeat-x scroll left bottom #F5F5F5;
+    padding: 0;
+}
+#benefits h3 {
+    font-size: 24px;
+}
+#benefits ul li {
+    color: #666666;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none outside none;
+    margin: 0 0 20px;
+    text-align: center;
+    width: 250px;
+}
+#benefits ul li img {
+    margin: 20px 0;
+}
+#benefits ul li h4, #benefits ul li p {
+    text-align: center;
+}
+#benefits ul li h4 {
+    margin: 0 0 5px;
+}
+#ftr {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    color: #999999;
+    padding: 40px 0;
+}
+#ftr ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 20px 0 0;
+    width: 310px;
+}
+#ftr ul li h5 {
+    font-size: 12px;
+    margin: 0 0 10px;
+}
+#ftr ul li p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* sn form */
+.formQuestion label, .profileQuestion label {
+    float: left;
+    width: 125px;
+}
+.formQuestion, .profileQuestion {
+    clear: both;
+    color: #666666;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 15px 0;
+}
+#disclaimer p {
+    font-size: 14px;
+    color: #666;
+    margin: 15px 0 15px 0;
+    line-height: 20px;
+}
+.core_error {
+    font-size: 12px;
+    color: red;
+    background: #ffebeb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.core_error br {
+    margin: 10px;
+}
+.core_error br:last-child {
+	margin: 0;
+}
+/* end sn form */
+
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+}
+
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+  position:absolute;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+   
+#boxes .window {
+  position:absolute;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+ 
+ 
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {
+  width:375px; 
+  height:203px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 #errors {
   color: red;
