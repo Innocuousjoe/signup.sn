@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       @user.update_attributes(params[:user])
       @user.construct_core_key
       if (@user.flash_error)
-        flash[:error] = @user.flash_error
+        flash.now[:error] = @user.flash_error
         render :new
       else
         session[:user_id] = @user.id

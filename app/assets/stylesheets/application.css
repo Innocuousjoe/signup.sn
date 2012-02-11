@@ -31,6 +31,7 @@ textarea, input {
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 3px #969696;
     margin: 0 auto 30px;
+    padding: 20px 0;
     width: 800px;
 }
 #modal h2 {
@@ -40,7 +41,7 @@ textarea, input {
 }
 #modal form {
     float: left;
-    padding: 30px;
+    padding-left: 20px;
     width: 440px;
 }
 #modal form ul li {
@@ -62,7 +63,7 @@ textarea, input {
     font-size: 16px;
     margin: 0 0 10px;
 }
-#modal form input[type="text"], #modal form input[type="password"] {
+#modal form input[type="text"], #modal form input[type="password"], form textarea {
     border: 1px solid #CCCCCC;
     border-radius: 2px 2px 2px 2px;
     box-shadow: 0 0 1px #CCCCCC inset;
@@ -98,6 +99,22 @@ textarea, input {
 #modal_benefits ul li h4 {
     margin: 0 0 5px;
 }
+
+#content.profile_details {
+	padding: 30px;
+	background: #fff url('bg_profile.jpg') no-repeat right top;
+}
+
+#content.profile_details form {
+	margin: 30px 0 0 0;
+}
+
+#content.profile_details p {
+	margin-right: 500px;
+	line-height: 24px;
+}
+
+
 #content {
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 5px 5px 5px 5px;
@@ -107,15 +124,15 @@ textarea, input {
     width: 940px;
 }
 #content h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: normal;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
 }
 #content p {
     color: #999999;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
-    margin: 15px 0;
+    margin: 15px 0 15px 0;
 }
 #content .profile {
     border: 1px solid #F1F1F1;
@@ -212,7 +229,7 @@ textarea, input {
     font-size: 16px;
     padding: 8px;
 }
-#landing form ul li input[type="submit"], #modal form input[type="submit"] {
+#landing form ul li input[type="submit"], form input[type="submit"] {
     background: url("btn_green.png") no-repeat scroll left top transparent;
     border: medium none;
     color: #FFFFFF;
@@ -225,10 +242,10 @@ textarea, input {
     text-transform: uppercase;
     width: 308px;
 }
-#landing form ul li input[type="submit"]:hover, #modal form input[type="submit"]:hover {
+#landing form ul li input[type="submit"]:hover, form input[type="submit"]:hover {
     background-position: left bottom;
 }
-#landing form ul li input[type="submit"]:active, #modal form input[type="submit"]:active {
+#landing form ul li input[type="submit"]:active, form input[type="submit"]:active {
     background-position: right top;
 }
 #benefits {
@@ -304,12 +321,25 @@ textarea, input {
     padding: 10px;
 }
 
-.core_error br {
-    margin: 10px;
+.core_error p {
+    margin: 5px;
 }
 .core_error br:last-child {
 	margin: 0;
 }
+
+form label[for=about_me] {
+    display: block;
+    float: none;
+    margin: 0 0 10px 0;
+}
+
+.profile_error {
+	color: red;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
 /* end sn form */
 
 .group:before, .group:after {
@@ -333,20 +363,15 @@ textarea, input {
    
 #boxes .window {
   position:absolute;
-  width:440px;
-  height:200px;
   display:none;
   z-index:9999;
-  padding:20px;
 }
  
  
 /* Customize your modal window here, you can add background image too */
 #boxes #dialog {
-  width:375px; 
-  height:203px;
-}
 
+}
 
 
 
