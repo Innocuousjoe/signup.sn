@@ -31,10 +31,10 @@ $(document).ready(function() {
     
     if (errors)
     {
-      setTimeout(popModal, 2000);
+      setTimeout(popModal, 5000);
     } else
     {
-      setTimeout(popModal, 2000);
+      setTimeout(popModal, 0);
     }
     $("#content").click(function(e){e.preventDefault(); popModal();})
      
