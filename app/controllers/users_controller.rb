@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def edit
+    @user = User.find(session[:user_id])
+    p @user
+  end
 
   def create
     @user = User.new(params[:user]) 
@@ -9,8 +14,8 @@ class UsersController < ApplicationController
     
     if @user.errors.empty?
       @user.save!
-      session[:validity] = true
-      redirect_to users_edit_path(@user.id)
+      session[:user_id] = @user.id
+      redirect_to edit_user_path(@user.id)
     else 
       flash.now[:error] = @user.flash_error
       render :new

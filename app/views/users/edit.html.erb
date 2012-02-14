@@ -30,7 +30,7 @@
 <h2>Almost Done! Create your profile below.</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet sem nulla. Aliquam erat volutpat.</p>
 
-	<%= form_for User.find(session[:user_id]) do |f| %>
+	<%= form_for @user do |f| %>
 	
 	<div class="profileQuestion" id="P_RACE">
     <%= f.label(:race, "Ethnicity:") %>
