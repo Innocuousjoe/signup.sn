@@ -18,6 +18,7 @@ group :development, :test do
   # Pretty printed test output
   gem 'mysql2'
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'turn', '0.8.2', :require => false
   gem 'ruby-debug19'
 end
