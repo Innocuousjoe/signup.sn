@@ -29,19 +29,18 @@ textarea, input {
 #modal {
     background: url("bg_modal.gif") repeat-y scroll left top #FFFFFF;
     border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 1px 3px #969696;
+    box-shadow: 0 0 10px #333;
     margin: 0 auto 30px;
-    padding: 20px 0;
     width: 800px;
 }
 #modal h2 {
-    font-size: 24px;
-    font-weight: normal;
+    font-size: 30px;
+    color: #67befd;
     margin: 0 0 20px;
 }
 #modal form {
     float: left;
-    padding-left: 20px;
+    padding: 30px;
     width: 440px;
 }
 #modal form ul li {
@@ -124,9 +123,9 @@ textarea, input {
     width: 940px;
 }
 #content h2 {
-    font-size: 24px;
-    font-weight: normal;
+    font-size: 30px;
     margin: 0 0 20px;
+    color: #67befd;
 }
 #content p {
     color: #999999;
@@ -366,11 +365,121 @@ form label[for=about_me] {
   display:none;
   z-index:9999;
 }
- 
- 
-/* Customize your modal window here, you can add background image too */
-#boxes #dialog {
 
+/* Jquery select box CSS */
+.selectBox-dropdown {
+    background: url("bg_selectbox.gif") repeat-x scroll left bottom #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    color: #999999;
+    cursor: default;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    outline: medium none;
+    padding: 2px 28px 2px 4px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.profile_details .selectBox-dropdown {
+    width: 220px;
+}
+
+.selectBox-dropdown:focus, .selectBox-dropdown:focus .selectBox-arrow {
+    border-color: #666666;
+}
+.selectBox-dropdown.selectBox-menuShowing {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.selectBox-dropdown .selectBox-label {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.2em 0.3em;
+    white-space: nowrap;
+    width: 100%;
+}
+.selectBox-dropdown .selectBox-arrow {
+    background: url("select_arrow.png") no-repeat scroll 50% center transparent;
+    border-left: 1px solid #BBBBBB;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23px;
+}
+.selectBox-dropdown-menu {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #666666;
+    border-right: 1px solid #666666;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    color: #666666;
+    font-size: 14px;
+    max-height: 200px;
+    overflow: auto;
+    position: absolute;
+    z-index: 99999;
+}
+.selectBox-inline {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    display: inline-block;
+    outline: medium none;
+    overflow: auto;
+    width: 250px;
+}
+.selectBox-inline:focus {
+    border-color: #666666;
+}
+.selectBox-options, .selectBox-options LI, .selectBox-options LI A {
+    cursor: default;
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.selectBox-options LI A {
+    background: none no-repeat scroll 6px center transparent;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 0 0.5em;
+    white-space: nowrap;
+}
+.selectBox-options LI.selectBox-hover A {
+    background-color: #EEEEEE;
+}
+.selectBox-options LI.selectBox-disabled A {
+    background-color: transparent;
+    color: #888888;
+}
+.selectBox-options LI.selectBox-selected A {
+    background-color: #E0E4F0;
+}
+.selectBox-options .selectBox-optgroup {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #666666;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0 0.3em;
+    white-space: nowrap;
+}
+.selectBox.selectBox-disabled {
+    color: #888888 !important;
+}
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+    border-color: #666666;
+    opacity: 0.5;
+}
+.selectBox-inline.selectBox-disabled {
+    color: #888888 !important;
+}
+.selectBox-inline.selectBox-disabled .selectBox-options A {
+    background-color: transparent !important;
 }
 
 
@@ -381,63 +490,3 @@ form label[for=about_me] {
 
 
 
-
-
-#errors {
-  color: red;
-}
-
-#gender_select label {
-  display: inline-block;
-}
-
-#user_sex {
-  width: 80px;
-}
-
-#user_sex_seeking {
-  width: 80px;
-}
-
-#height label {
-  display: inline-block;
-}
-
-#user_feet {
-  width: 60px;
-}
-
-#user_inches {
-  width: 60px;
-}
-
-#banner {
-  background-color: blue;
-  height: 70px;  
-}
-
-#center {
-  background-color: pink;
-  margin: 50%;
-}
-
-#banner-text {
-  color: white;
-  padding: 15px;
-}
-
-#birthday label{
-  display: inline-block;
-}
-
-#user_birthday_month {
-  width: 70px;
-}
-
-#user_birthday_day {
-  width: 70px;
-}
-
-#user_birthday_year {
-  width: 70px;
-}

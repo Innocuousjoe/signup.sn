@@ -31,7 +31,7 @@ $(document).ready(function() {
     
     if (errors)
     {
-      setTimeout(popModal, 5000);
+      setTimeout(popModal, 0);
     } else
     {
       setTimeout(popModal, 0);

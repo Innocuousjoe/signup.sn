@@ -4,16 +4,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(params[:user]) 
+    @user = User.new(params[:user]) 
     @user.construct_core_key
-    @user.save!
-    if (@user.flash_error)
+    
+    if @user.errors.empty?
+      @user.save!
+      session[:validity] = true
+      redirect_to users_edit_path(@user.id)
+    else 
       flash.now[:error] = @user.flash_error
       render :new
-    else
-      session[:validity] = true
-      session[:user_id] = @user.id
-      render "profile/new"
     end
   end
 
