@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   include SinglesnetUser
   
-  after_validation :construct_core_key
+  after_validation :construct_core_key, if: :new_record?
+  after_validation :construct_full_url, unless: :new_record?
     
   attr_accessor :redirect_url, :flash_error, :shortcut
     

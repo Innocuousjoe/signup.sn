@@ -32,6 +32,12 @@
 
 	<%= form_for @user do |f| %>
 	
+	<div id="errors">
+    <% @user.errors.full_messages.each do |message| %>
+      <%= message %><br>
+    <% end %>
+  </div>
+	
 	<div class="profileQuestion" id="P_RACE">
     <%= f.label(:race, "Ethnicity:") %>
     <%= f.select(:race, {
@@ -181,7 +187,7 @@
     <%= f.text_area(:about, :cols => 48, :rows => 8)  %>
   </div>
   <div class="login-button">
-    <%= f.submit 'Create My Profile' %>
+    <%= f.submit 'Create My Profile', id: "user_submit" %>
   </div>
   <% end %>
 	

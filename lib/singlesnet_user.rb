@@ -8,21 +8,7 @@ module SinglesnetUser
   # this is a after_validation callback; return false on failure
   def construct_core_key
     poster = SinglesnetApi.new
-    hash = {
-      "screenname" => self.username,
-      "email" => self.email,
-      "password" => self.password,
-      "sex" => self.sex,
-      "sex_seeking" => self.sex_seeking,
-      "birthday_month" => self.birthday_month, 
-      "birthday_day" => self.birthday_day,
-      "birthday_year" => self.birthday_year,
-      "country" => "US",
-      "zipcode" => self.zipcode.to_s,
-      "captcha_key" => self.captcha_key,
-      "captcha_answer" => self.captcha_answer,
-    }
-    response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
+    response = poster.class.post(SINGLESNET_CORE_URL, :body => core_hash)
     if (response.parsed_response["success"].nil?) then
       parse_errors(response).each{|e| errors[:base] << e }
       return false # stop callback chain
@@ -33,7 +19,7 @@ module SinglesnetUser
   
   def construct_full_url
     poster = SinglesnetApi.new
-    hash = {
+    hash = core_hash.merge({
       "core_key" => self.core_key,
       "height" => self.height,
       "bodytype" => self.body,
@@ -63,11 +49,12 @@ module SinglesnetUser
       "children_date" => 0,
       "high_school" => 0,
       "college" => 0
-    }
+    })
     follow_url = "/signup/submit?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
     response = poster.class.post(follow_url, :body => hash)
     if(response.parsed_response["success"].nil?) then
-      # parse_errors(response)
+      parse_errors(response).each{ |e| errors[:base] << e }
+      return false # stop callback chain
     else
       self.redirect_url = response.parsed_response["success"]
     end
@@ -75,5 +62,22 @@ module SinglesnetUser
   
   def parse_errors(response)
     response.parsed_response["failure"]["message"]
+  end
+  
+  def core_hash
+    {
+      "screenname" => self.username,
+      "email" => self.email,
+      "password" => self.password,
+      "sex" => self.sex,
+      "sex_seeking" => self.sex_seeking,
+      "birthday_month" => self.birthday_month, 
+      "birthday_day" => self.birthday_day,
+      "birthday_year" => self.birthday_year,
+      "country" => "US",
+      "zipcode" => self.zipcode.to_s,
+      "captcha_key" => self.captcha_key,
+      "captcha_answer" => self.captcha_answer,
+    }
   end
 end

@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/submit?campaign_id=10184&format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: screenname=OKCW999&email=OKCW999%40sharklasers.com&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_13292621904815&captcha_answer=pArADE&core_key=core_1329262206991&height=21&bodytype=3&hair_color=6&eye_color=1&race=3&occupation=7&drink=0&smoke=0&personal_description_wanted=1&personal_description=0&sports_play=0&smoke_date=0&exercise=0&outdoor=0&artistic=0&religion=0&sports_fan=0&pet=0&race_date=0&country_date=0&diet=0&relationship_serious=0&children=0&children_date=0&high_school=0&college=0
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 23:31:31 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=3a1426a2778c7eec35fcb65754cb7e46; expires=Mon, 05-Mar-2012 23:31:28
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=3a1426a2778c7eec35fcb65754cb7e46; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '202'
+      X-Sn-Rid:
+      - 398acba2
+    body: <success lead_id='L18342091'>http://www.singlesnet.com/?action=login&amp;user_id=29241886&amp;hash=272f98391b9649b022fb64539023bd11&amp;api=1</success>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 23:31:32 GMT
+recorded_with: VCR 2.0.0.rc1
