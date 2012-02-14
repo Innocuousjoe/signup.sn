@@ -17,8 +17,13 @@ gem 'less-rails-bootstrap'
 group :development, :test do
   # Pretty printed test output
   gem 'mysql2'
-  gem 'rspec-rails'
-  gem 'capybara'
   gem 'turn', '0.8.2', :require => false
   gem 'ruby-debug19'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'webmock', '~> 1.7.8'
+  gem 'capybara'
+  gem 'vcr', '~> 2.0.0.rc1'  
 end

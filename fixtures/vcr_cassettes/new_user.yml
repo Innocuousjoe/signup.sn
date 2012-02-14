@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/captcha?format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 19:39:58 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=470d4e8288a1b64ad40442d073537d34; expires=Mon, 05-Mar-2012 19:39:58
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=470d4e8288a1b64ad40442d073537d34; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '201'
+      X-Sn-Rid:
+      - 398acba2
+    body: <captcha key="captcha_13292483983649">iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAMAAAAuj2TTAAAAhFBMVEX///9ISEgZGRlSUlJvb2+AgIDFxcXi4uI1NTWvr68yMjKfn59ZWVnv7++Pj49mZmbf398lJSVzc3NMTEyMjIw/Pz+/v7+oqKicnJwnJye4uLhFRUWUlJTPz88tLS06OjppaWmtra0zMzNOTk5xcXHGxsZRUVGJiYlGRkaEhIRdXV0rKyt4Ua5yAAAC40lEQVRoge2Y63KbMBCFNWuWiw1CgIHe3KZ1733/96t2hZAc46nTSWbtDOdHAhhnzofO7iootWrVqlWr7kYgbeC5BPBKUABeCQqDbKRdPIMYBFJpG/8nHyXKlAPZivp5knA+CjUBQYjLX7stgcJgFM5BGoAad0Lmrhc/bw+ih+j5e5DOZgvRKBe2WxUEkH1W17gAQtfcktxyL55BIKcUXQLp+ZoHSSQdX9AE0kymyyWQjq+Z6WaV5ZamEPZ9JvbWdt70+yWQ1v5oKVt8RqyVjtvYTYwZ9kbrUTaUrY9LILQknC0fNIjanMoT2I/KSAF4ka2anOl3+0dTI5y6JTFLIO6WtwUOBzmI2UhTIlYqPQXJwqkr9yKMSA+ST+etvaBFOZT3oVVYgpZdRlxTuVcQie5IeDWgL6nvVfIgjbUxuGN+xCWDbCIQl60iBnF0YN7U9usaC+FkMUg3PU97+MAmy0ylm8gy4p7Lfa4R+m0rC5KMZ1BlhHM1gbQu8lQU80CZFseD8GcBhC5tKV8DYlGNapTGON2iAHzR/cwR1wgq5o1B+JsfsKthY5nHgzrIhss7rbgFfcW6g96uys9fypyAJJTAMxDwC/jJlonsBtlHy7hk2YMf6KUjEPq0PQEJRRStqixITV3rc84HWpnBcxg3QZzHhPfzEYiPHi9KIz5IuGvVyPlvUA/UvUyhEXe2IbvqcCB+PobJPtpEQdlz+7ItDWX3kc4db3q79nE4HMKUmjMQle2NTeXOJi7/Jj4RQ8obvRTyAJKcgVgdqiE9AqSVdLLcZG9s0Kvh4j1hzEQg2Zjk2fQXcrNz/wsLiou97f7RcdDfGkBoXiYJ041KvNTnOXLNrS5bPPvrth19JP8cKXvSWy1+jXX1AGCQLdvvzTGaIFr+bdHT3opU02aRB8d3gC24kfNC5l5Q5Lq2a9LYwaHT37bGcXeHGEoVbgGoS2kagIW5udcpV+suk7Rq1apVq1ZN+guvOR4oQLnYJQAAAABJRU5ErkJggg==</captcha>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 19:39:58 GMT
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/submit/core?campaign_id=10184&format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: screenname=OKCW1999&email=OKCW1999%40sharklasers.com&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_13292483983649&captcha_answer=buNts
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 19:40:13 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=816c720ecf46c2a34c6d53075a0b48ae; expires=Mon, 05-Mar-2012 19:40:13
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=816c720ecf46c2a34c6d53075a0b48ae; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '201'
+      X-Sn-Rid:
+      - 398acba2
+    body: <success lead_id='' core_key='core_13292484137477' />
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 19:40:14 GMT
+recorded_with: VCR 2.0.0.rc1
