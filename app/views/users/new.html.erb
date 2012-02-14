@@ -5,7 +5,9 @@
     <%= form_for @user do |f| %>
     <h2>Lorem ipsum dolor headline</h2>
     <div id="errors">
-      <%= flash.now[:error] %>
+      <% @user.errors.full_messages.each do |message| %>
+        <%= message %><br>
+      <% end %>
     </div>
     <div class='formCore'>
       <div class="formSection" id="CORE_SECTION_SEEKING">

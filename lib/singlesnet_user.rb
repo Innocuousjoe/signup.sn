@@ -24,7 +24,7 @@ module SinglesnetUser
     }
     response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
     if (response.parsed_response["success"].nil?) then
-      errors[:base] << parse_errors(response)
+      parse_errors(response).each{|e| errors[:base] << e }
       return false # stop callback chain
     else
       self.core_key = response.parsed_response["success"]["core_key"]
@@ -74,6 +74,6 @@ module SinglesnetUser
   end
   
   def parse_errors(response)
-    response.parsed_response["failure"]["message"].join "<br>"
+    response.parsed_response["failure"]["message"]
   end
 end

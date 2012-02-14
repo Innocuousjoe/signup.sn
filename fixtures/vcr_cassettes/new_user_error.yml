@@ -13,7 +13,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 14 Feb 2012 20:00:51 GMT
+      - Tue, 14 Feb 2012 21:19:28 GMT
       Content-Type:
       - text/xml
       Transfer-Encoding:
@@ -21,9 +21,9 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - APISESSID=f17ac14dfa7aa2cb988b5f6f222b7e4d; expires=Mon, 05-Mar-2012 20:00:51
+      - APISESSID=0f4028b84e9b44aa305d19f41602f366; expires=Mon, 05-Mar-2012 21:19:28
         GMT; path=/; domain=.singlesnet.com
-      - APISESSID=f17ac14dfa7aa2cb988b5f6f222b7e4d; path=/
+      - APISESSID=0f4028b84e9b44aa305d19f41602f366; path=/
       Pragma:
       - no-cache
       Cache-Control:
@@ -31,16 +31,16 @@ http_interactions:
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       X-Sn-Wid:
-      - '201'
+      - '202'
       X-Sn-Rid:
       - 398acba2
-    body: <captcha key="captcha_13292496512383">iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAMAAAAuj2TTAAAAflBMVEX///9ISEjFxcVvb29SUlI1NTUZGRmMjIyoqKiAgIDf399MTEyfn5/i4uJGRkZZWVlzc3MyMjJmZmbPz8+Kioq/v7+enp7v7+8lJSUvLy/U1NRiYmIdHR2qqqopKSmPj4+Hh4fGxsaFhYU/Pz90dHROTk58fHyVlZWhoaFsbGzFxIfpAAACtklEQVRoge2YiXKbQAyGd7ARFoZy1TFt6m7v4/1fsKu9EBjseDLxblL+GWfYa/x/kbQiEWLVqlWrVs0IILSDOSU37gfSizh5jnZJCpvtDQfACJX8zEsYu1E7Yyt9qheAOZDwKKU3BulT9nOMqEC2Awhss2u7RxSRgKSQbhIbkPfvKuPwctVzDBqXWWriaGbv4fpMOxOJLKOfD8pYjSYoy0fOSiMxE1kZDASGVP9A5guTJ/XFmAwcdiLxtZUEAgEoVUp8fKSv/2QDolU1S7mupicYoHIToK8QPeH9CKwn9f3QosS9tXDSFF3RaVOYi2lj0D55WtEzXdt9Tfh9OBBolIHiqwX5QoNOLR0F1fxesGbhxUDMxHfaiig7rPtgIJrD2/1G8bCrD2pc5JdA3AS5r1Ee1aEfwUAqY91aovw4suUWz0AsAOOw4wOdCVPszPocyJbi1Y2TS2eUd88i484FA7FFa21VyEzsdEjUL3owO9rsZ7j5SEB6HhFq9aqGcw7iz7Gz+vZtIwJpjPERSKOvgmEvB/HR2+iD+jFcjTCQFrShjq9/5uZHICwJTR+hpiOyGEBMW0Tplku7nrO903NmqDs7uiPhQTRJU7llmybmXl0C0c7du9YujQTE3Kknu2zTxBTJPIirlra3T2kkIK15pRclcZCpVE3KJRB3e6lBve+pw6d/QoOQ9GPikkTHA37yFJqADBgkqT77GqMBEX8bYPq1CDKioPZzkEO/uT+IYCDEoj55z0BOSyAMgx2XB5kHAaEwnE0XCI5lK5dqZBJNr6OYmw2kHLHZU6PH37h0a7HhRBGBiIP6073F9tFk/2wfWcIgxQMihPRFjIV++ZqAiIh+7VeEjkW/oYxBhLkWXovMv4bsO+SVbIpbh7zI3bvwqwbhejMgIq579Vl6MyCrVq1ateq/0j+khzQmgxIXBgAAAABJRU5ErkJggg==</captcha>
+    body: <captcha key="captcha_1329254368685">iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAMAAAAuj2TTAAAAgVBMVEX///9ISEgZGRlSUlJmZmafn5+AgIAyMjLf398lJSXFxcVvb281NTXi4uKMjIxMTEw/Pz9LS0uvr69zc3NiYmJXV1fv7+/Pz88nJydZWVlkZGRsbGy/v7+oqKicnJxFRUV2dnYpKSmPj499fX1paWk+Pj5RUVFGRkZKSkpcXFyEhIQMQ1XxAAADFUlEQVRoge2YiXKbMBRFGQHPgBA4olHiFqcJTZu2//+B1VuEnIxrN5nEojPcGW8s9j28TTjLVq1atWrVqlUXkMoAUnt4DykFywdR6vwRCwUxXX7gHm2ePj6CtLr5WGv/rMo/OkXKO96kzpIISE5HfrLVx9s8qVw3VxZsxn5QZrap8lNnMkghZxVwcxG/p9yo7Q4+4+uXAfClm3eo4sypsMXnGr8DIGFMQhA2Az5/84ky9JJRsqM8fbIHt7DbIwz4sCaSbvFKoh+yfw0knyvXbmaUy3ysYCiWmwLKynCWTRcnYDWE4LTS99N3ynKfHaNDgz3b9ClTlLPpl52WQaHMEndirO7BV6hpMzLvP3ByPPr3I23xcdrAbPoYyAaoxlOC+HS43c3ZIE4ojzBSg5UKUEUV94dzdaNl2w7AZUlBTIshmJx8bDki9BEzvocAsqXcOgRRGEt9X0kU4+4kIN7MA8TWn3ONiFNMGfLWh3KPIHOjgwP3CUFiWqBMx5NgjohimwNlWQRpqNEpjsUiQJqYFj7l97d3NP1ijQgIdMgnzRgGnv53X7c4QpcBouMvY7XseEL3d8ihD0CMhIRigANcmcpPzdpZuwyQln/ZRaYnzhjTPauAjFJOWq1/tPtSTnPTIkCk41TMscGxptWBtgEEuQYXSrw1zg/wm/gdiwDxXWqkyt7yJDS/NoHjRxFAaL8NIHs3xQ6xGJAeBwdbEG/WV/CmV9c/IZQy36bwYZh45byiMi/cQ7oaqesdplU/lGPY7EZcANPaMYBwuQuIL3SePXrfLuNWdy6I+sWitQRRAKE1JMjRlisdG91+GSBNuCE8svQGhClnEGQe5GjJH9xEXSs1RoYXNVePD9Xxe6HR2bgooaWXgBQQgpTjHLmo47/JZOf++QgX/KAv95haxm/QWNwn7h4XpdCHTASpBxho1etswjvb10tKQEKCU4YanfptEjXbN4vNSkh4reXvx54QY3Rnzl2ipGXJ6hcxpv+lPp5LC0DWXNU8ZVI7erOs2HdTCTbV3z7vKpel/o931apVq1ateqX+AFJPI3F6yAwnAAAAAElFTkSuQmCC</captcha>
     http_version: !!null 
-  recorded_at: Tue, 14 Feb 2012 20:00:51 GMT
+  recorded_at: Tue, 14 Feb 2012 21:19:29 GMT
 - request:
     method: post
     uri: http://api.singlesnet.com/api/1.2/signup/submit/core?campaign_id=10184&format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
-    body: screenname=&email=&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_13292496512383&captcha_answer=buNts
+    body: screenname=&email=&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_1329254368685&captcha_answer=buNts
     headers: {}
   response:
     status:
@@ -50,7 +50,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 14 Feb 2012 20:00:53 GMT
+      - Tue, 14 Feb 2012 21:19:31 GMT
       Content-Type:
       - text/xml
       Transfer-Encoding:
@@ -58,9 +58,9 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - APISESSID=c7135174312a6374ad77d07d92dda3a7; expires=Mon, 05-Mar-2012 20:00:53
+      - APISESSID=f8c764b888572c455ef8324ffab69510; expires=Mon, 05-Mar-2012 21:19:31
         GMT; path=/; domain=.singlesnet.com
-      - APISESSID=c7135174312a6374ad77d07d92dda3a7; path=/
+      - APISESSID=f8c764b888572c455ef8324ffab69510; path=/
       Pragma:
       - no-cache
       Cache-Control:
@@ -68,12 +68,49 @@ http_interactions:
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       X-Sn-Wid:
-      - '201'
+      - '202'
       X-Sn-Rid:
       - 398acba2
-    body: <failure core_key='core_13292496536455'><message>CAPTCHA answer was incorrect</message><message>Screen
+    body: <failure core_key='core_13292543715238'><message>CAPTCHA answer was incorrect</message><message>Screen
       name is invalid.</message><message>E-mail address is not valid. (Check the length
       and remove any spaces from beginning and end.)</message><invalid_fields>captcha_answer,screenname,email,email_confirm</invalid_fields></failure>
     http_version: !!null 
-  recorded_at: Tue, 14 Feb 2012 20:00:54 GMT
+  recorded_at: Tue, 14 Feb 2012 21:19:32 GMT
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/captcha?format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 21:19:31 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=cba22423bd9fbb330c66bbe6daec4271; expires=Mon, 05-Mar-2012 21:19:31
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=cba22423bd9fbb330c66bbe6daec4271; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '202'
+      X-Sn-Rid:
+      - 398acba2
+    body: <captcha key="captcha_1329254371804">iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAMAAAAuj2TTAAAAq1BMVEX///9ISEgZGRmoqKg1NTXi4uKAgICMjIwvLy9zc3OPj4/v7+8tLS1CQkJvb2+fn58+Pj5SUlLFxcVsbGw/Pz9RUVFUVFSvr6/f39+/v78yMjJZWVlmZmZMTEwlJSXPz8+5ublpaWliYmJcXFwxMTGhoaFKSkqUlJRkZGS4uLg6OjpxcXFOTk4pKSlGRkaOjo7U1NRLS0tXV1eEhIScnJx9fX1dXV3GxsaJiYk6qXv0AAADb0lEQVRoge1Ya3PTMBDUyPYF22DXbkCWEyeFtlAeLbQ8//8v4x6Sk5aECVMik+D9Eo9jZXa1e3dylBoxYsSIEceMfGgCfwFxApANTeLx0DpFHYdviNZPjkFHpPVTNOTf0zHRWsd/8LzmYJV4VcS0tKj3xWxnRgl/VMhmsvsq1P1MdNTa4YXZD8GdkCCBiK+ISrLzOvIPANyVw6zZE8sdCVXIKKd9rSzfSnYwRntDaN00hXSBnwuw++a7FRQoPQdYkqKoBOjoTqW3r/A2nEiwKrHGnMUvX2HNLEMRfwiOxBQ5ESGcbmmfk83PAuep6IPFN2dy2WRDTEdX2Mx5gaTIhwYN6YVUvwRsJUSzIWb1A90lP2GWobsxEcWU2JpiRH10TsmyAC1HrUs3lX4vBA15Dm6EVF74szeBNRBiVxklUkpea33OTiQlG0NJk4xtEVLICAFLSvrmi76cBhfCLbNDLhdozJXWH8iJSknCSGFjc5R2ej8oXohfzMWOE35y46UEL/WEAtEyp4l6j9cfKVlYInDNu83pP0NvmP8DIVPmTJYAzw1M4Ce4XXDVZ6GlREIqpUIA5HBHQcISgRu+33ji1vFXk1jHsqaVzW/RN8isU4IvJZeyN4GFJBKhTl+o3G3xrcISgc+82RIprIXOiJB+fEuwfKvDgo+K+JuhI3AiX4e2pOKct/oOfZgxsXlOqU9YoDxDdZy6BkttiZmiIediSkfp+sLdITWqrkRcGVgIZesdJusr+pAJBwO0nwV1LXGERHVWhMzAshekAVLxcIrpWug1XE8heLZ4OCMfQB/MxPdcKnKyxB3+OPV535EdXWxYb2Ofrlm71n7n6QCjPXKZRx8ayZPrQmSPnMcl9VYMQbe09pcqkjk4S6mJFSekoqUvIAt/lJfeAz4MVOmym1Tj3+mCZx2Urtka5cudCtrNQXLqR6Maw8sxpU34N8bCb6+Up3XJchKxp9bFqk3xudYbsuyXi5Gr3xzk7FvHQtA1zNzPN4zUFVGceMucDbk/6ArxhL9vgtf2BtCeZrDx74NVBU8fCIGVA/FvXlqCokYiZnO/zK0XMpca8Yf3dSGD/9mwjq0v2SW0eGps0RCzTcihAE9iPD2aQxciHbk06vCFKJu7UX/oQgRHI0TdFzI0m0fhoH1Yx9EIGTFixIgR/yF+AjPyLLUdPkFKAAAAAElFTkSuQmCC</captcha>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 21:19:32 GMT
 recorded_with: VCR 2.0.0.rc1
