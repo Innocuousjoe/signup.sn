@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/submit?campaign_id=10184&format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: screenname=OKC1111&email=OKCW1111%40sharklasers.com&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_13292629831405&captcha_answer=dabbED&core_key=core_13292630145075&height=21&bodytype=3&hair_color=6&eye_color=&race=3&occupation=&drink=0&smoke=0&personal_description_wanted=1&personal_description=0&sports_play=0&smoke_date=0&exercise=0&outdoor=0&artistic=0&religion=0&sports_fan=0&pet=0&race_date=0&country_date=0&diet=0&relationship_serious=0&children=0&children_date=0&high_school=0&college=0
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 23:43:36 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=bd093791688c7340bfe19cdaa1c58154; expires=Mon, 05-Mar-2012 23:43:36
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=bd093791688c7340bfe19cdaa1c58154; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '201'
+      X-Sn-Rid:
+      - 398acba2
+    body: <failure profile_key='profile_13292630162399'><message>What is your eye
+      color?</message><message>What is your occupation?</message><invalid_fields>eye_color,occupation</invalid_fields></failure>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 23:43:36 GMT
+recorded_with: VCR 2.0.0.rc1
