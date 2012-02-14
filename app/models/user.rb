@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   include SinglesnetUser
   
+  after_validation :construct_core_key
+    
   attr_accessor :redirect_url, :flash_error, :shortcut
     
   def city_finder

@@ -4,7 +4,8 @@ module SinglesnetUser
   CID = "10184"
   SINGLESNET_FULL_URL= "http://api.singlesnet.com/api/1.2/signup/submit"
   SINGLESNET_CORE_URL= "/signup/submit/core" + "?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID  
-  
+
+  # this is a after_validation callback; return false on failure
   def construct_core_key
     poster = SinglesnetApi.new
     hash = {
@@ -20,11 +21,11 @@ module SinglesnetUser
       "zipcode" => self.zipcode.to_s,
       "captcha_key" => self.captcha_key,
       "captcha_answer" => self.captcha_answer,
-      # "city" => self.city_id,
     }
     response = poster.class.post(SINGLESNET_CORE_URL, :body => hash)
-    if (Nokogiri::XML.parse(response.body).css("success").empty?) then
-      parse_errors(response)
+    if (response.parsed_response["success"].nil?) then
+      errors[:base] << parse_errors(response)
+      return false # stop callback chain
     else
       self.core_key = response.parsed_response["success"]["core_key"]
     end
@@ -66,13 +67,13 @@ module SinglesnetUser
     follow_url = "/signup/submit?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
     response = poster.class.post(follow_url, :body => hash)
     if(response.parsed_response["success"].nil?) then
-      parse_errors(response)
+      # parse_errors(response)
     else
       self.redirect_url = response.parsed_response["success"]
     end
   end
   
   def parse_errors(response)
-    self.flash_error = response.parsed_response["failure"]["message"]
+    response.parsed_response["failure"]["message"].join "<br>"
   end
 end

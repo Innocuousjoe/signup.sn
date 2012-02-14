@@ -5,15 +5,11 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(session[:user_id])
-    p @user
   end
 
   def create
     @user = User.new(params[:user]) 
-    @user.construct_core_key
-    
-    if @user.errors.empty?
-      @user.save!
+    if @user.save
       session[:user_id] = @user.id
       redirect_to edit_user_path(@user.id)
     else 

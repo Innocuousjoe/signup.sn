@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/captcha?format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 20:00:51 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=f17ac14dfa7aa2cb988b5f6f222b7e4d; expires=Mon, 05-Mar-2012 20:00:51
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=f17ac14dfa7aa2cb988b5f6f222b7e4d; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '201'
+      X-Sn-Rid:
+      - 398acba2
+    body: <captcha key="captcha_13292496512383">iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAMAAAAuj2TTAAAAflBMVEX///9ISEjFxcVvb29SUlI1NTUZGRmMjIyoqKiAgIDf399MTEyfn5/i4uJGRkZZWVlzc3MyMjJmZmbPz8+Kioq/v7+enp7v7+8lJSUvLy/U1NRiYmIdHR2qqqopKSmPj4+Hh4fGxsaFhYU/Pz90dHROTk58fHyVlZWhoaFsbGzFxIfpAAACtklEQVRoge2YiXKbQAyGd7ARFoZy1TFt6m7v4/1fsKu9EBjseDLxblL+GWfYa/x/kbQiEWLVqlWrVs0IILSDOSU37gfSizh5jnZJCpvtDQfACJX8zEsYu1E7Yyt9qheAOZDwKKU3BulT9nOMqEC2Awhss2u7RxSRgKSQbhIbkPfvKuPwctVzDBqXWWriaGbv4fpMOxOJLKOfD8pYjSYoy0fOSiMxE1kZDASGVP9A5guTJ/XFmAwcdiLxtZUEAgEoVUp8fKSv/2QDolU1S7mupicYoHIToK8QPeH9CKwn9f3QosS9tXDSFF3RaVOYi2lj0D55WtEzXdt9Tfh9OBBolIHiqwX5QoNOLR0F1fxesGbhxUDMxHfaiig7rPtgIJrD2/1G8bCrD2pc5JdA3AS5r1Ee1aEfwUAqY91aovw4suUWz0AsAOOw4wOdCVPszPocyJbi1Y2TS2eUd88i484FA7FFa21VyEzsdEjUL3owO9rsZ7j5SEB6HhFq9aqGcw7iz7Gz+vZtIwJpjPERSKOvgmEvB/HR2+iD+jFcjTCQFrShjq9/5uZHICwJTR+hpiOyGEBMW0Tplku7nrO903NmqDs7uiPhQTRJU7llmybmXl0C0c7du9YujQTE3Kknu2zTxBTJPIirlra3T2kkIK15pRclcZCpVE3KJRB3e6lBve+pw6d/QoOQ9GPikkTHA37yFJqADBgkqT77GqMBEX8bYPq1CDKioPZzkEO/uT+IYCDEoj55z0BOSyAMgx2XB5kHAaEwnE0XCI5lK5dqZBJNr6OYmw2kHLHZU6PH37h0a7HhRBGBiIP6073F9tFk/2wfWcIgxQMihPRFjIV++ZqAiIh+7VeEjkW/oYxBhLkWXovMv4bsO+SVbIpbh7zI3bvwqwbhejMgIq579Vl6MyCrVq1ateq/0j+khzQmgxIXBgAAAABJRU5ErkJggg==</captcha>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 20:00:51 GMT
+- request:
+    method: post
+    uri: http://api.singlesnet.com/api/1.2/signup/submit/core?campaign_id=10184&format=xml&key=b53671a74a41b3e513e0abf4fdedf3af
+    body: screenname=&email=&password=password&sex=M&sex_seeking=F&birthday_month=1&birthday_day=1&birthday_year=1919&country=US&zipcode=94110&captcha_key=captcha_13292496512383&captcha_answer=buNts
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 Feb 2012 20:00:53 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - APISESSID=c7135174312a6374ad77d07d92dda3a7; expires=Mon, 05-Mar-2012 20:00:53
+        GMT; path=/; domain=.singlesnet.com
+      - APISESSID=c7135174312a6374ad77d07d92dda3a7; path=/
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Sn-Wid:
+      - '201'
+      X-Sn-Rid:
+      - 398acba2
+    body: <failure core_key='core_13292496536455'><message>CAPTCHA answer was incorrect</message><message>Screen
+      name is invalid.</message><message>E-mail address is not valid. (Check the length
+      and remove any spaces from beginning and end.)</message><invalid_fields>captcha_answer,screenname,email,email_confirm</invalid_fields></failure>
+    http_version: !!null 
+  recorded_at: Tue, 14 Feb 2012 20:00:54 GMT
+recorded_with: VCR 2.0.0.rc1
