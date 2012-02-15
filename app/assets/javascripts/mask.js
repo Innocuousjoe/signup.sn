@@ -29,9 +29,13 @@ $(document).ready(function() {
  
     //select all the a tag with name equal to modal
     
-    setTimeout(popModal, 0)
-    
-    $("#content").click(function(e){e.preventDefault(); popModal();})
+    if (errors)
+    {
+      setTimeout(popModal, 0);
+    } else
+    {
+      setTimeout(popModal, 0);
+    }
      
     //if close button is clicked
     $('.window .close').click(function (e) {
