@@ -36,6 +36,7 @@ $(document).ready(function() {
     {
       setTimeout(popModal, 0);
     }
+    $("#content.overlay").click(function(e){e.preventDefault(); popModal();})
      
     //if close button is clicked
     $('.window .close').click(function (e) {
