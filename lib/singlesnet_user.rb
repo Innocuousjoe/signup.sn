@@ -9,9 +9,8 @@ module SinglesnetUser
   def construct_core_key
     poster = SinglesnetApi.new
     response = poster.class.post(SINGLESNET_CORE_URL, :body => core_hash)
-    if (response.parsed_response["success"].nil?) then
-      parse_errors(response).each{|e| errors[:base] << e }
-      return false # stop callback chain
+    if (response.parsed_response["success"].nil?)
+      parse_errors(response)
     else
       self.core_key = response.parsed_response["success"]["core_key"]
     end
@@ -52,16 +51,18 @@ module SinglesnetUser
     })
     follow_url = "/signup/submit?key=" + Rails.configuration.singlesnet_api_key + "&format=xml&campaign_id=" + CID
     response = poster.class.post(follow_url, :body => hash)
-    if(response.parsed_response["success"].nil?) then
-      parse_errors(response).each{ |e| errors[:base] << e }
-      return false # stop callback chain
+    if(response.parsed_response["success"].nil?)
+      parse_errors(response)
     else
       self.redirect_url = response.parsed_response["success"]
     end
   end
   
   def parse_errors(response)
-    response.parsed_response["failure"]["message"]
+    errs = response.parsed_response["failure"]["message"]
+    errs = [errs] unless errs.respond_to? :each # if there's just one err, it's a string, not an array
+    errs.each{|e| errors[:base] << e }
+    return false # stop callback chain
   end
   
   def core_hash

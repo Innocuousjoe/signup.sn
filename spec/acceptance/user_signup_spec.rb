@@ -25,6 +25,11 @@ feature "Users", "I want to be able to get past the first form" do
     page.should have_content "is invalid"
   end
 
+  scenario "When there is exactly one error", :js => true do
+    do_first_form vcr: 'new_user_one_error', username: "fnaekwlfameafo", email: "dfwemnqnoriwenqldas@sharklasers.com", captcha: "" # broken captcha!
+    page.should have_content "CAPTCHA Answer was empty."
+  end
+
 end
 
 feature "Users", "I want to be able to get past the second form" do
@@ -45,7 +50,7 @@ feature "Users", "I want to be able to get past the second form" do
     end
   end
   
-  scenario "When there are no errors", :js => true do
+  scenario "When there are errors", :js => true do
     do_first_form(:vcr => 'new_user_error_two', :email => "OKCW1111@sharklasers.com", :username => "OKC1111", :captcha => "dabbED")
     VCR.use_cassette('new_user_part_two_with_errors') do
       page.execute_script('$("select").selectBox("destroy")') # DIE SELECTBOX DIE.  The jquery plugin was irritating me SO I DESTROYED IT
