@@ -1,0 +1,162 @@
+<%= form_for @user do |f| %>
+
+<% if @user.errors.any? %>
+  <div class="profile_error">
+    <% @user.errors.full_messages.each do |message| %>
+      <%= message %><br>
+    <% end %>
+  </div>
+<% end %>  
+
+<div class="profileQuestion" id="P_RACE">
+  <%= f.label(:race, "Ethnicity:") %>
+  <%= f.select(:race, {
+  "Please Select" => "",   
+  "Black / African descent" => "1", 
+  "Asian" => "2", 
+  "White / Caucasian" => "3", 
+  "East Indian" => "4", 
+  "Hispanic / Latino" => "5", 
+  "Middle Eastern" => "6", 
+  "Multi-racial" => "7", 
+  "Native American" => "8", 
+  "Pacific Islander" => "9", 
+  "Other" => "10" })  %>
+</div>
+<div class="profileQuestion" id="P_EYE_COLOR">
+  <%= f.label(:eye, "Eye Color:") %>
+  <%= f.select(:eye, {
+  "Please Select" => "",  
+  "Blue" => "1", 
+  "Brown" => "2", 
+  "Green" => "3", 
+  "Gray" => "4", 
+  "Hazel" => "5", 
+  "Other" => "6" 
+  })  %>
+</div>
+<div class="profileQuestion" id="P_HAIR_COLOR">
+  <%= f.label(:hair, "Hair Color:") %>
+  <%= f.select(:hair, {
+  "Please Select" => "",  
+  "Auburn / Red" => "1", 
+  "Bald" => "2", 
+  "Black" => "3", 
+  "Blonde" => "4", 
+  "Dark blonde" => "5", 
+  "Dark brown" => "6", 
+  "Gray / White" => "7", 
+  "Light brown" => "8", 
+  "Salt and pepper gray" => "9" 
+  })  %>
+</div>
+<div class="profileQuestion" id="P_BODY_TYPE">
+  <%= f.label(:body, "Body Type:") %>
+  <%= f.select(:body, {
+  "Please Select" => "",
+  "Average" => "1", 
+  "Slim / Slender" => "2", 
+  "Fit / Athletic" => "3", 
+  "Few extra pounds" => "4"})  %>
+</div>
+<div class="profileQuestion" id="P_HEIGHT">
+  <%= f.label(:height, "Height:")%>
+  <%= f.select(:height, {
+  "Please Select" => "",
+  "4\' 4\"" => "1",
+  "4\' 5\"" => "2",
+  "4\' 6\"" => "3",
+  "4\' 7\"" => "4",
+  "4\' 8\"" => "5",
+  "4\' 9\"" => "6",
+  "4\' 10\"" => "7",
+  "4\' 11\"" => "8",
+  "5\'" => "9",
+  "5\' 1\"" => "10",
+  "5\' 2\"" => "11",
+  "5\' 3\"" => "12",
+  "5\' 4\"" => "13",
+  "5\' 5\"" => "14",
+  "5\' 6\"" => "15",
+  "5\' 7\"" => "16",
+  "5\' 8\"" => "17",
+  "5\' 9\"" => "18",
+  "5\' 10\"" => "19",
+  "5\' 11\"" => "20",
+  "6\'" => "21",
+  "6\' 1\"" => "22",
+  "6\' 2\"" => "23",
+  "6\' 3\"" => "24",
+  "6\' 4\"" => "25",
+  "6\' 5\"" => "26",
+  "6\' 6\"" => "27",
+  "6\' 7\"" => "28",
+  "6\' 8\"" => "29"
+  })%>
+</div>
+<div class="profileQuestion" id="P_OCCUPATION">
+  <%= f.label(:occupation, "Occupation:")%>
+  <%= f.select(:occupation, {
+    "Please Select" => "",
+    "Accounting" => "1",
+  "Actor / Actress" => "2",
+  "Administrative" => "3",
+  "Advertising" => "4",
+  "Agriculture" => "5",
+  "Architect" => "6",
+  "Arts" => "7",
+  "Banking" => "8",
+  "Biotechnology" => "9",
+  "Business Owner" => "10",
+  "Computers, Hard" => "12",
+  "Computers, Soft" => "13",
+  "Construction" => "14",
+  "Consulting" => "15",
+  "Customer Service" => "16",
+  "Engineering" => "17",
+  "Entrepreneur" => "18",
+  "Financial Services" => "19",
+  "Government" => "20",
+  "Graphic Design" => "21",
+  "Health-care" => "22",
+  "Hospitality / Tourism" => "23",
+  "Human Resources" => "25",
+  "Info. Technology" => "26",
+  "Insurance" => "27",
+  "Internet" => "28",
+  "Law Enforcement" => "29",
+  "Legal" => "30",
+  "Manufacturing" => "31",
+  "Marketing" => "32",
+  "Military" => "33",
+  "Maintenance" => "34",
+  "Nanny / Child Care" => "35",
+  "Nursing" => "36",
+  "Pharmaceutical" => "37",
+  "Public Relations" => "38",
+  "Real Estate" => "39",
+  "Restaurant" => "40",
+  "Recruiting" => "41",
+  "Retail" => "42",
+  "Sales" => "43",
+  "Self-Employed" => "44",
+  "Science" => "45",
+  "Social Services" => "11",
+  "Sports" => "46",
+  "Student" => "47",
+  "Teacher" => "48",
+  "Telecommunications" => "49",
+  "Transportation" => "50",
+  "Writer / Editor" => "51",
+  "Retired" => "52"}
+  )  %>
+</div>
+<div class="profileQuestion" id="P_ABOUT_ME">
+  <%= f.label(:about, "About Me:") %>
+  </br>
+  <%= f.text_area(:about, :cols => 48, :rows => 8)  %>
+</div>
+<div class="login-button">
+  <%= f.submit 'Create My Profile', id: "user_submit" %>
+</div>
+<% end %>

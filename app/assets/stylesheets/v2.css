@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  margin: 0 0 40px;
+}
+.wrap {
+  margin: auto;
+  width: 960px;
+}
+#hdr {
+  background: none repeat scroll 0 0 #F1F1F1;
+  padding: 20px;
+}
+#hdr h1 {
+  background: url("images/logo.png") repeat scroll 0 0 transparent;
+  display: block;
+  height: 43px;
+  text-indent: -9999px;
+  width: 190px;
+}
+#wrap {
+  margin: auto;
+  width: 960px;
+}
+#content {
+  background: url("images/bg_map.png") no-repeat scroll left 215px transparent;
+  padding: 40px 0 0;
+}
+#content h2 {
+  color: #333333;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+}
+#content h3 {
+  color: #999999;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+}
+#form {
+  background: none repeat scroll 0 0 #F1F7FF;
+  border: 2px solid #1367CA;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 0 5px #999999;
+  float: right;
+  margin: 0 0 40px 40px;
+  width: 360px;
+}
+#form h3 {
+  background: none repeat scroll 0 0 #1367CA;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+  padding: 10px;
+  text-align: center;
+}
+#profile {
+}
+#profile #about_tips {
+  color: #999999;
+  position: absolute;
+  right: 135px;
+  top: -155px;
+}
+#profile #about_tips li {
+  font-size: 12px;
+  margin: 5px 0 0 10px;
+}
+#profile #about_tips p {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+#profile h2 {
+  color: #333333;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+#profile #form {
+  background: none repeat scroll 0 0 #F1F7FF;
+  border: 2px solid #1367CA;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 0 5px #999999;
+  float: none;
+  margin: 0 auto 40px;
+  width: 720px;
+}
+#profile form textarea {
+  width: 290px;
+}
+#profile #submit_profile {
+  margin: 0 0 20px 90px;
+  position: relative;
+}
+#profile #form h3 {
+  background: url("images/status_step2.png") repeat scroll center center #1367CA;
+  color: #FFFFFF;
+  display: block;
+  height: 58px;
+  padding: 0;
+  text-align: center;
+  text-indent: -9999px;
+}
+#benefits {
+  border: 1px solid #F1F1F1;
+  border-radius: 4px 4px 4px 4px;
+  clear: both;
+  padding: 0 0 20px;
+}
+#benefits h3 {
+  color: #333333;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 20px;
+}
+#benefits ul li {
+  border-right: 1px solid #F1F1F1;
+  color: #999999;
+  display: block;
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+  list-style: none outside none;
+  padding: 0 15px;
+  text-align: center;
+  width: 205px;
+}
+#benefits ul li img {
+  margin: 0 0 10px;
+}
+#benefits ul li.last {
+  border: medium none;
+}
+#benefits ul li h4 {
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+#ftr {
+  clear: both;
+  margin: 40px 0 0;
+}
+#ftr ul li {
+  color: #999999;
+  float: left;
+  list-style: none outside none;
+  margin: 0 40px 0 0;
+  width: 290px;
+}
+#ftr ul li.last {
+  margin: 0;
+}
+#ftr ul li h5 {
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+#ftr ul li p {
+  font-size: 11px;
+  line-height: 18px;
+}
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+}
+form input[type="submit"] {
+  background: url("../images_common/btn_green.png") no-repeat scroll left top transparent;
+  border: medium none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font: bold 24px "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  height: 70px;
+  margin: 0 0 0 -4px;
+  outline: medium none;
+  text-shadow: 0 -1px 0 #4F710B;
+  text-transform: uppercase;
+  width: 308px;
+}
+form input[type="submit"]:hover {
+  background-position: left bottom;
+}
+form input[type="submit"]:active {
+  background-position: right top;
+}
+form input[type="text"], form input[type="password"], form textarea {
+  border: 1px solid #CCCCCC;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 0 1px #CCCCCC inset;
+  color: #999999;
+  font-size: 14px;
+  padding: 4px;
+}
+.formQuestion label, .profileQuestion label {
+  float: left;
+  padding: 0 10px 0 0;
+  text-align: right;
+  width: 110px;
+}
+.formQuestion, .profileQuestion {
+  clear: both;
+  color: #666666;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 10px 0;
+}
+#disclaimer p {
+  color: #666666;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 20px;
+}
+.core_error {
+  background: none repeat scroll 0 0 #FFEBEB;
+  color: red;
+  font-size: 12px;
+  padding: 10px;
+}
+.core_error p {
+  margin: 5px;
+}
+.core_error br:last-child {
+  margin: 0;
+}
+form label[for="about_me"] {
+}
+input#button {
+  margin: 0 25px;
+}
+.profile_error {
+  color: red;
+  font-weight: bold;
+  margin: 30px;
+}
+.selectBox-dropdown {
+  background: url("../images_common/bg_selectbox.gif") repeat-x scroll left bottom #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px 2px 2px 2px;
+  color: #999999;
+  cursor: default;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  outline: medium none;
+  padding: 3px 26px 0 2px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
+}
+#profile .selectBox-dropdown {
+  width: 270px;
+}
+.selectBox-dropdown:focus, .selectBox-dropdown:focus .selectBox-arrow {
+  border-color: #666666;
+}
+.selectBox-dropdown.selectBox-menuShowing {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.selectBox-dropdown .selectBox-label {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.2em 0.3em;
+  white-space: nowrap;
+  width: 100%;
+}
+.selectBox-dropdown .selectBox-arrow {
+  background: url("../images_common/select_arrow.png") no-repeat scroll 50% center transparent;
+  border-left: 1px solid #BBBBBB;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 23px;
+}
+.selectBox-dropdown-menu {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #666666;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #666666;
+  font-size: 14px;
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  z-index: 99999;
+}
+.selectBox-inline {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #BBBBBB;
+  border-radius: 4px 4px 4px 4px;
+  display: inline-block;
+  outline: medium none;
+  overflow: auto;
+  width: 250px;
+}
+.selectBox-inline:focus {
+  border-color: #666666;
+}
+.selectBox-options, .selectBox-options LI, .selectBox-options LI A {
+  cursor: default;
+  display: block;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.selectBox-options LI A {
+  background: none no-repeat scroll 6px center transparent;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 0 0.5em;
+  white-space: nowrap;
+}
+.selectBox-options LI.selectBox-hover A {
+  background-color: #EEEEEE;
+}
+.selectBox-options LI.selectBox-disabled A {
+  background-color: transparent;
+  color: #888888;
+}
+.selectBox-options LI.selectBox-selected A {
+  background-color: #E0E4F0;
+}
+.selectBox-options .selectBox-optgroup {
+  background: none repeat scroll 0 0 #EEEEEE;
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0 0.3em;
+  white-space: nowrap;
+}
+.selectBox.selectBox-disabled {
+  color: #888888 !important;
+}
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+  border-color: #666666;
+  opacity: 0.5;
+}
+.selectBox-inline.selectBox-disabled {
+  color: #888888 !important;
+}
+.selectBox-inline.selectBox-disabled .selectBox-options A {
+  background-color: transparent !important;
+}
