@@ -60,7 +60,6 @@ feature "Users", "I want to be able to get past the second form" do
       select "6'", :from => "user_height"
       fill_in "user_about", :with => "This is super important text"
       click_button "user_submit"
-      debugger
       page.should have_content "What is your occupation?"
     end
   end
