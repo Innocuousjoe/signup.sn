@@ -32,12 +32,8 @@
 
 	<%= form_for @user do |f| %>
 	
-	<div id="errors">
-    <% @user.errors.full_messages.each do |message| %>
-      <%= message %><br>
-    <% end %>
-  </div>
-	
+	<%= render :errors %>
+  
 	<div class="profileQuestion" id="P_RACE">
     <%= f.label(:race, "Ethnicity:") %>
     <%= f.select(:race, {
