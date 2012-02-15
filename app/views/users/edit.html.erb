@@ -32,7 +32,13 @@
 
 	<%= form_for @user do |f| %>
 	
-	<%= render "errors" %>
+  <% if @user.errors.any? %>
+    <div class="profile_error">
+      <% @user.errors.full_messages.each do |message| %>
+        <%= message %><br>
+      <% end %>
+    </div>
+  <% end %>  
   
 	<div class="profileQuestion" id="P_RACE">
     <%= f.label(:race, "Ethnicity:") %>

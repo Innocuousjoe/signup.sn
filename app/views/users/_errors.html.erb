@@ -1,5 +1,5 @@
 <% if @user.errors.any? %>
-  <div class="core_error">
+  <div class="<%= css_class %>">
     <% @user.errors.full_messages.each do |message| %>
       <p><%= message %></p>
     <% end %>
