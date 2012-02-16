@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    background: url("bg_body.gif") repeat-x scroll left top #F4F4F4;
+    background: url(v1/bg_body.gif) repeat-x scroll left top #F4F4F4;
     color: #333333;
     font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
 }
@@ -14,7 +14,7 @@ textarea, input {
     outline: medium none;
 }
 #hdr {
-    background: url("bg_hdr.jpg") no-repeat scroll left top transparent;
+    background: url(v1/bg_hdr.jpg) no-repeat scroll left top transparent;
     height: 73px;
     margin: 0 0 30px;
     width: auto;
@@ -27,7 +27,7 @@ textarea, input {
     width: 1000px;
 }
 #modal {
-    background: url("bg_modal.gif") repeat-y scroll left top #FFFFFF;
+    background: url(v1/bg_modal.gif) repeat-y scroll left top #FFFFFF;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 10px #333;
     margin: 0 auto 30px;
@@ -101,7 +101,7 @@ textarea, input {
 
 #content.profile_details {
 	padding: 30px;
-	background: #fff url('bg_profile.jpg') no-repeat right top;
+	background: #fff url(v1/bg_profile.jpg) no-repeat right top;
 }
 
 #content.profile_details form {
@@ -176,7 +176,7 @@ textarea, input {
     list-style: none outside none;
 }
 #landing {
-    background: url("bg_landing_1.jpg") no-repeat scroll right top #FFFFFF;
+    background: url(v1/bg_landing_1.jpg) no-repeat scroll right top #FFFFFF;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 4px #969696;
     margin: 0 auto 30px;
@@ -229,7 +229,7 @@ textarea, input {
     padding: 8px;
 }
 #landing form ul li input[type="submit"], form input[type="submit"] {
-    background: url("btn_green.png") no-repeat scroll left top transparent;
+    background: url(v1/btn_green.png) no-repeat scroll left top transparent;
     border: medium none;
     color: #FFFFFF;
     cursor: pointer;
@@ -248,7 +248,7 @@ textarea, input {
     background-position: right top;
 }
 #benefits {
-    background: url("bg_benefits.png") repeat-x scroll left bottom #F5F5F5;
+    background: url(v1/bg_benefits.png) repeat-x scroll left bottom #F5F5F5;
     padding: 0;
 }
 #benefits h3 {
@@ -357,7 +357,7 @@ form label[for=about_me] {
   position:absolute;
   z-index:9000;
   background-color:#000;
-  display:none;
+  display:none; 
 }
    
 #boxes .window {
@@ -368,7 +368,7 @@ form label[for=about_me] {
 
 /* Jquery select box CSS */
 .selectBox-dropdown {
-    background: url("bg_selectbox.gif") repeat-x scroll left bottom #FFFFFF;
+    background: url(v1/bg_selectbox.gif) repeat-x scroll left bottom #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 2px 2px 2px 2px;
     color: #999999;
@@ -402,7 +402,7 @@ form label[for=about_me] {
     width: 100%;
 }
 .selectBox-dropdown .selectBox-arrow {
-    background: url("select_arrow.png") no-repeat scroll 50% center transparent;
+    background: url(v1/select_arrow.png) no-repeat scroll 50% center transparent;
     border-left: 1px solid #BBBBBB;
     height: 100%;
     position: absolute;

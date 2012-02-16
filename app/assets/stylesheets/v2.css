@@ -15,7 +15,7 @@ body {
   padding: 20px;
 }
 #hdr h1 {
-  background: url("images/logo.png") repeat scroll 0 0 transparent;
+  background: url(v2/logo.png) repeat scroll 0 0 transparent;
   display: block;
   height: 43px;
   text-indent: -9999px;
@@ -26,7 +26,7 @@ body {
   width: 960px;
 }
 #content {
-  background: url("images/bg_map.png") no-repeat scroll left 215px transparent;
+  background: url(v2/bg_map.png) no-repeat scroll left 215px transparent;
   padding: 40px 0 0;
 }
 #content h2 {
@@ -99,7 +99,7 @@ body {
   position: relative;
 }
 #profile #form h3 {
-  background: url("images/status_step2.png") repeat scroll center center #1367CA;
+  background: url(v2/status_step2.png) repeat scroll center center #1367CA;
   color: #FFFFFF;
   display: block;
   height: 58px;
@@ -173,7 +173,7 @@ body {
 .group {
 }
 form input[type="submit"] {
-  background: url("../images_common/btn_green.png") no-repeat scroll left top transparent;
+  background: url(v2/btn_green.png) no-repeat scroll left top transparent;
   border: medium none;
   color: #FFFFFF;
   cursor: pointer;
@@ -241,7 +241,7 @@ input#button {
   margin: 30px;
 }
 .selectBox-dropdown {
-  background: url("../images_common/bg_selectbox.gif") repeat-x scroll left bottom #FFFFFF;
+  background: url(v2/bg_selectbox.gif) repeat-x scroll left bottom #FFFFFF;
   border: 1px solid #CCCCCC;
   border-radius: 2px 2px 2px 2px;
   color: #999999;
@@ -273,7 +273,7 @@ input#button {
   width: 100%;
 }
 .selectBox-dropdown .selectBox-arrow {
-  background: url("../images_common/select_arrow.png") no-repeat scroll 50% center transparent;
+  background: url(v2/select_arrow.png) no-repeat scroll 50% center transparent;
   border-left: 1px solid #BBBBBB;
   height: 100%;
   position: absolute;
