@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   before_filter :variation
-  
+  layout :nil, :only => :interstitial
   def new
     @user = User.new
     render "new_v#{@variation}"
@@ -26,11 +26,15 @@ class UsersController < ApplicationController
   def update
     @user = User.find(session[:user_id])
     if @user.update_attributes(params[:user])
-      # redirect_to @user.redirect_url
-      render "interstitial", :layout => nil
+      session[:redirect_url] = @user.redirect_url
+      redirect_to interstitial_users_url
     else
       render "edit_v#{@variation}"
     end
+  end
+  
+  def interstitial
+
   end
   
   private
