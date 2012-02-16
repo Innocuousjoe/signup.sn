@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20120201191216) do
     t.integer  "about"
     t.integer  "city_id"
     t.string   "core_key"
+    t.string   "redirect_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

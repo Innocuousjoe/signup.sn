@@ -25,6 +25,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :about
       t.integer :city_id
       t.string :core_key
+      t.string :redirect_url
 
       t.timestamps
     end
