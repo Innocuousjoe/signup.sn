@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+/*
+ *= require application
+ */
+
 body {
   font-family: Helvetica,Arial,sans-serif;
   margin: 0 0 40px;

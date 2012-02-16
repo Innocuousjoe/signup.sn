@@ -1,7 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/*
+ *= require application
+ */
+
 body {
     background: url(v1/bg_body.gif) repeat-x scroll left top #F4F4F4;
     color: #333333;
