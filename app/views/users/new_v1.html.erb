@@ -1,227 +1,253 @@
+<!-- Google Website Optimizer Control Script -->
+<script>
+function utmx_section(){}function utmx(){}
+(function(){var k='2479737585',d=document,l=d.location,c=d.cookie;function f(n){
+if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.
+length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;
+d.write('<sc'+'ript src="'+
+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com'
++'/siteopt.js?v=1&utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='
++new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"></sc'+'ript>')})();
+</script><script>utmx("url",'A/B');</script>
+<!-- End of Google Website Optimizer Control Script -->
+<!-- Google Website Optimizer Tracking Script -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['gwo._setAccount', 'UA-26188677-1']);
+  _gaq.push(['gwo._trackPageview', '/2479737585/test']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End of Google Website Optimizer Tracking Script -->
+
 <div id="boxes">
 
   <!-- #customize your modal window here -->
   <div id="modal" class="group window">
     <%= render "new_form"%>
 
-          <div id="modal_benefits">
-            <h3>Free Member Benefits</h3>
-            <ul>
-              <li> <%= image_tag("v1/icon_chat_small.png")%>
-                <h4>Chat With Thousands</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </li>
-              <li> <%= image_tag("v1/icon_message_small.png")%>
-                <h4>Email Featured Members</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </li>
-              <li> <%= image_tag("v1/icon_profile_small.png")%>
-                <h4>View Member Profiles</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </li>
-              <li> <%= image_tag("v1/icon_singles_small.png")%>
-                <h4>Proprietary Matching</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </li>
-            </ul>
-          </div>
+    <div id="modal_benefits">
+      <h3>Free Member Benefits</h3>
+      <ul>
+        <li> <%= image_tag("v1/icon_chat_small.png")%>
+          <h4>Chat With Thousands</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li> <%= image_tag("v1/icon_message_small.png")%>
+          <h4>Email Featured Members</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li> <%= image_tag("v1/icon_profile_small.png")%>
+          <h4>View Member Profiles</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+        <li> <%= image_tag("v1/icon_singles_small.png")%>
+          <h4>Proprietary Matching</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </li>
+      </ul>
+    </div>
 
-        </div>
+  </div>
 
 
-        <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
-        <div id="mask"></div>
-      </div>
-      <div id="hdr">
-        <h1>Singlesnet.com</h1>
-      </div>
+  <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
+  <div id="mask"></div>
+</div>
+<div id="hdr">
+  <h1>Singlesnet.com</h1>
+</div>
 
-      <div id="content" class="wrap group overlay">
+<div id="content" class="wrap group overlay">
 
-        <h2>Found 3,400 Matches in San Francisco</h2>
+  <h2>Found 3,400 Matches in San Francisco</h2>
 
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
 
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
 
-        <div class="profile last">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile last">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile last">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile last">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
+  <div class="profile last">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile last">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile last">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile last">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
 
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>
-        <div class="profile last">
-          <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
-          <h3>Username</h3>
-          <p class="info">33 - San Francisco, CA</p>
-          <p><a href="#">View my profile</a></p>
-          <p class="status">Online Now</p>
-          <ul>
-            <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
-            <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
-          </ul>
-        </div>		
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>
+  <div class="profile last">
+    <%= image_tag("v1/profile_f1.jpg", "class" => "profile_picture") %>
+    <h3>Username</h3>
+    <p class="info">33 - San Francisco, CA</p>
+    <p><a href="#">View my profile</a></p>
+    <p class="status">Online Now</p>
+    <ul>
+      <li><a href="#"><%= image_tag("v1/comment.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/emoticon_wink.png") %></a></li>
+      <li><a href="#"><%= image_tag("v1/add.png") %></a></li>
+    </ul>
+  </div>		
 
-      </div>
+</div>
