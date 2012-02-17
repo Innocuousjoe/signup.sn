@@ -9,7 +9,6 @@ def do_first_form opts={}
     fill_in "user_password", with: "password"
     fill_in "user_email", with: opts[:email] || "OKCW995544@sharklasers.com"
     fill_in "user_captcha_answer", with: opts[:captcha] || "REENed"
-    debugger
     click_button "user_submit"
   end
 end

@@ -3,6 +3,7 @@ SignupSn::Application.routes.draw do
     
   resources :users do
     get :interstitial, :on => :collection
+    get :index, :on => :collection
   end
   
 end

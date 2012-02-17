@@ -3,6 +3,7 @@
 
 <html lang="en">
 <head>
+  <!-- Google Website Optimizer Control Script -->
   <% if Rails.env.production? %>
   <script>
   function utmx_section(){}function utmx(){}
@@ -28,6 +29,8 @@
     })();
   </script>
   <% end %>
+  <!-- End of Google Website Optimizer Tracking Script -->
+  
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>index</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
@@ -35,5 +38,11 @@
 	<!-- Date: 2012-02-17 -->
 </head>
 <body>
+  <script>
+    redirect_url = "<%= new_user_path.html_safe %>";
+    window.onload = function() {
+      window.location.href = redirect_url
+    };
+  </script>
 </body>
 </html>

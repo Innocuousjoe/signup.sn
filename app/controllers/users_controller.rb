@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   before_filter :variation
   layout :nil
-  layout 'application', :except => :interstitial
+  layout 'application', :except => [:interstitial, :index]
   
   def new
     @user = User.new
@@ -36,6 +36,9 @@ class UsersController < ApplicationController
   end
   
   def interstitial
+  end
+  
+  def index
   end
   
   private
