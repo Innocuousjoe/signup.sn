@@ -1,4 +1,5 @@
 <!-- Google Website Optimizer Control Script -->
+<% if Rails.env.production? %>
 <script>
 function utmx_section(){}function utmx(){}
 (function(){var k='2479737585',d=document,l=d.location,c=d.cookie;function f(n){
@@ -22,6 +23,7 @@ d.write('<sc'+'ript src="'+
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<% end %>
 <!-- End of Google Website Optimizer Tracking Script -->
 
 <div id="boxes">

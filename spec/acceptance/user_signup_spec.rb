@@ -5,10 +5,11 @@ def do_first_form opts={}
     visit "/users/new"
     # click("#content")
     fill_in "user_zipcode", with: "94110"
-    fill_in "user_username", with: opts[:username] || "OKCW999"
+    fill_in "user_username", with: opts[:username] || "OKCW995544"
     fill_in "user_password", with: "password"
-    fill_in "user_email", with: opts[:email] || "OKCW999@sharklasers.com"
-    fill_in "user_captcha_answer", with: opts[:captcha] || "pArADE"
+    fill_in "user_email", with: opts[:email] || "OKCW995544@sharklasers.com"
+    fill_in "user_captcha_answer", with: opts[:captcha] || "REENed"
+    debugger
     click_button "user_submit"
   end
 end
@@ -46,7 +47,7 @@ feature "Users", "I want to be able to get past the second form" do
       select "Arts", :from => "user_occupation"
       fill_in "user_about", :with => "This is super important text"
       click_button "user_submit"
-      page.should have_content "Upload your photo"
+      page.should have_content "My Profile"
     end
   end
   
